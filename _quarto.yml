@@ -1,0 +1,31 @@
+project:
+    title: "Sistemas Caóticos"
+    type: website
+    output-dir: _slides
+    render:
+        - presentation.qmd
+
+author: "Timóteo Fassoni"
+description: "Introdução aos Sistemas Caóticos"
+lang: pt-BR
+
+bibliography: room/references.bib
+csl: https://www.zotero.org/styles/ieee
+
+format:
+    revealjs:
+        mainfont: "TeX Gyre Pagella"
+        no-clean: true
+        output-file: slides
+        theme: dark
+        logo: "https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg"
+        css: "room/slides-theme.css"
+        incrmental: true
+        vcenter: true
+        transition: slide
+        slide-number: true
+        chalkboard:
+            buttons: true
+        preview-links: auto
+        include-in-header:
+            text: '<link rel="icon" href="https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg" type="image/svg+xml">'
