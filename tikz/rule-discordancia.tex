@@ -1,0 +1,184 @@
+\documentclass[tikz, border=0]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{calc,arrows.meta,patterns, shapes.geometric, calc, backgrounds}
+
+\definecolor{Red}{RGB}{ 159, 36, 48 }
+\definecolor{LBlue}{RGB}{ 186, 220, 255 }
+\definecolor{DBlue}{HTML}{132C53} 
+\definecolor{gray}{HTML}{708090}
+
+
+\NewDocumentCommand{\AgentPlus}{O{(0,0)}}{
+    \begin{scope}[shift={#1}]
+    \draw[DBlue, thick, fill=DBlue] (0,0) circle (1.5)
+        node[font=\bfseries, text=white] {+1};
+    \end{scope}
+}
+
+\NewDocumentCommand{\AgentMinus}{O{(0,0)}}{
+    \begin{scope}[shift={#1}]
+    \draw[DBlue, thick, fill=LBlue] (0,0) circle (1.5)
+        node[font=\bfseries, text=DBlue] {-1};
+    \end{scope}
+}
+
+\newcommand{\Canvas}{
+\useasboundingbox (-20.3,-14.4) rectangle (20.3,14.4);
+
+\begin{scope}[shift={(13,7.2)}, name prefix=A2-]   
+    \coordinate (left) at (-8,0);
+    \coordinate (east-agent) at ( 5,0);
+    \coordinate (west-agent) at (-5,0);
+    \coordinate (north-agent) at (0, 5);
+    \coordinate (south-agent) at (0,-5);
+    \coordinate (center) at (0,0);
+\end{scope}
+
+\begin{scope}[shift={(13,-7.2)}, name prefix=A3-]   
+    \coordinate (left) at (-8,0);
+    \coordinate (east-agent) at ( 5,0);
+    \coordinate (west-agent) at (-5,0);
+    \coordinate (north-agent) at (0, 5);
+    \coordinate (south-agent) at (0,-5);
+    \coordinate (center) at (0,0);
+\end{scope}
+
+\begin{scope}[shift={(-13,0)}, name prefix=A1-]
+    \coordinate (right) at (8,0);
+    \coordinate (east-agent) at ( 5,0);
+    \coordinate (west-agent) at (-5,0);
+    \coordinate (north-agent) at (0, 5);
+    \coordinate (south-agent) at (0,-5);
+    \coordinate (center) at (0,0);
+\end{scope}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\draw[gray, thick] (-13,0) -- (A1-east-agent);
+\draw[gray, thick] (-13,0) -- (A1-west-agent);
+\draw[gray, thick] (-13,0) -- (A1-north-agent);
+\draw[gray, thick] (-13,0) -- (A1-south-agent);
+
+\AgentMinus[(A1-center)]
+\AgentPlus[(A1-east-agent)]
+\AgentPlus[(A1-west-agent)]
+\AgentMinus[(A1-north-agent)]
+\AgentPlus[(A1-south-agent)]
+
+\begin{scope}[shift={(-13,0)}, on background layer]
+    \draw[Red, opacity=0.5, line cap=round, line join=round, line width=3.6em ] (A1-west-agent) arc ( 180:0:5 );
+\end{scope}
+\begin{scope}[shift={(-13,0)}]
+    \node[text=DBlue, font=\bfseries] at ($(A1-west-agent)+(90:5)+(2,3)$) {Discordância};
+\end{scope}
+
+\draw[gray, thick] (13,7.2) -- (A2-east-agent);
+\draw[gray, thick] (13,7.2) -- (A2-west-agent);
+\draw[gray, thick] (13,7.2) -- (A2-north-agent);
+\draw[gray, thick] (13,7.2) -- (A2-south-agent);
+
+\AgentPlus[(A2-center)]
+\AgentPlus[(A2-east-agent)]
+\AgentPlus[(A2-west-agent)]
+\AgentMinus[(A2-north-agent)]
+\AgentPlus[(A2-south-agent)]
+
+\draw[gray, thick] (13,-7.2) -- (A3-east-agent);
+\draw[gray, thick] (13,-7.2) -- (A3-west-agent);
+\draw[gray, thick] (13,-7.2) -- (A3-north-agent);
+\draw[gray, thick] (13,-7.2) -- (A3-south-agent);
+
+\AgentMinus[(A3-center)]
+\AgentPlus[(A3-east-agent)]
+\AgentPlus[(A3-west-agent)]
+\AgentMinus[(A3-north-agent)]
+\AgentPlus[(A3-south-agent)]
+
+
+\draw[DBlue,-{Stealth[length={1.5em}, width={1em}]}] ([shift={(35:3em)}]A1-center) to[out=35,in=-180]  (A2-left);
+\node[text=DBlue, font=\bfseries, anchor=south, align=center] at (0,7.5) {Agente muda de opinião\\ com probabilidade $\boldsymbol{\varepsilon}$};
+
+\draw[DBlue,-{Stealth[length={1.5em}, width={1em}]}] ([shift={(-35:3em)}]A1-center) to[out=-35,in=-180]  (A3-left);
+\node[text=DBlue, font=\bfseries, anchor=north, align=center] at (0,-7.5) {Agente permanece\\ com probabilidade $\boldsymbol{1-\varepsilon}$};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\draw[gray, thick] (-13,0) -- (A1-east-agent);
+\draw[gray, thick] (-13,0) -- (A1-west-agent);
+\draw[gray, thick] (-13,0) -- (A1-north-agent);
+\draw[gray, thick] (-13,0) -- (A1-south-agent);
+
+\AgentMinus[(A1-center)]
+\AgentPlus[(A1-east-agent)]
+\AgentPlus[(A1-west-agent)]
+\AgentMinus[(A1-north-agent)]
+\AgentPlus[(A1-south-agent)]
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\draw[gray, thick] (-13,0) -- (A1-east-agent);
+\draw[gray, thick] (-13,0) -- (A1-west-agent);
+\draw[gray, thick] (-13,0) -- (A1-north-agent);
+\draw[gray, thick] (-13,0) -- (A1-south-agent);
+
+\AgentMinus[(A1-center)]
+\AgentPlus[(A1-east-agent)]
+\AgentPlus[(A1-west-agent)]
+\AgentMinus[(A1-north-agent)]
+\AgentPlus[(A1-south-agent)]
+
+\begin{scope}[shift={(-13,0)}, on background layer]
+    \draw[Red, opacity=0.5, line cap=round, line join=round, line width=3.6em ] (A1-west-agent) arc ( 180:0:5 );
+\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\begin{scope}[shift={(-13,0)}]
+    \node[text=DBlue, font=\bfseries] at ($(A1-west-agent)+(90:5)+(2,3)$) {Discordância};
+\end{scope}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\draw[gray, thick] (13,7.2) -- (A2-east-agent);
+\draw[gray, thick] (13,7.2) -- (A2-west-agent);
+\draw[gray, thick] (13,7.2) -- (A2-north-agent);
+\draw[gray, thick] (13,7.2) -- (A2-south-agent);
+
+\AgentPlus[(A2-center)]
+\AgentPlus[(A2-east-agent)]
+\AgentPlus[(A2-west-agent)]
+\AgentMinus[(A2-north-agent)]
+\AgentPlus[(A2-south-agent)]
+
+\draw[DBlue,-{Stealth[length={1.5em}, width={1em}]}] ([shift={(35:3em)}]A1-center) to[out=35,in=-180]  (A2-left);
+\node[text=DBlue, font=\bfseries, anchor=south, align=center] at (0,7.5) {Agente muda de opinião\\ com probabilidade $\boldsymbol{\varepsilon}$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\draw[gray, thick] (13,-7.2) -- (A3-east-agent);
+\draw[gray, thick] (13,-7.2) -- (A3-west-agent);
+\draw[gray, thick] (13,-7.2) -- (A3-north-agent);
+\draw[gray, thick] (13,-7.2) -- (A3-south-agent);
+
+\AgentMinus[(A3-center)]
+\AgentPlus[(A3-east-agent)]
+\AgentPlus[(A3-west-agent)]
+\AgentMinus[(A3-north-agent)]
+\AgentPlus[(A3-south-agent)]
+
+\draw[DBlue,-{Stealth[length={1.5em}, width={1em}]}] ([shift={(-35:3em)}]A1-center) to[out=-35,in=-180]  (A3-left);
+\node[text=DBlue, font=\bfseries, anchor=north, align=center] at (0,-7.5) {Agente permanece\\ com probabilidade $\boldsymbol{1-\varepsilon}$};
+\end{tikzpicture}
+
+\end{document}
