@@ -25,7 +25,8 @@ inksplit() {
 
 #> Clean workspace
 cleanWorkspace() {
-    rm -rf "$INPUT_DIR/*pdf."
+    rm -rf "$INPUT_DIR/*.pdf"
+    rm -rf "$INPUT_DIR/*.gz"
 }
 
 FILE="$1"
