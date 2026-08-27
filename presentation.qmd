@@ -32,48 +32,86 @@ shortcodes:
 ##
 {{< MakeChapter
   numbering="01"
-  titulo="Caos e Física"
-  desc="O problema de definir Complexidade na Física"
-  img="https://upload.wikimedia.org/wikipedia/commons/7/71/Lorenz_system_r28_s10_b2-6666.png"
+  titulo="Revisando o Votante"
+  desc="Modelo do Votante, transições de fase e a classe GV."
+  img="https://assets.tmfss.net/pos-seminar/fractal-dyn-voter.svg"
 >}}
 
-## [Caos e Física]{.title-sec}
-
-[**A questão central:** Como podemos *definir* o que é **Caos**?]{.fragment}
-
-::::{style="display: flex; justify-content: space-around; align-items: center;"}
-
-::: {.incremental}
-- O que vocês entendem quando dizemos a palavra caos?
-- O que vocês *acham* que é um sistema caótico?
-- Qual a diferença entre *caos* e *desordem*?
-- Qual a diferença entre *caos* e *imprevisibilidade*?
-- Qual a diferença entre *caos* e *complexidade*?
-:::
-::::
-
-## [Caos e Física]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh; text-align: center;"}
-
-[Os conceitos-chave aqui:]{.fragment style="font-size: 1.5em; margin-bottom: 20px;"}
-
-[**Complexidade** e **Caos**]{.fragment style="font-size: 1.5em;"}
-
-[Vamos fazer um experimento mental...]{.fragment}
-:::
-
-## [Caos e Física]{.title-sec}
+## [O modelo do Votante]{.title-sec}
 
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_1.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_5.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_6.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_7.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_8.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/complex_wide_9.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/voter-model_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/voter-model_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/voter-model_5.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/voter-model_6.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+## [O modelo do Votante]{.title-sec}
+
+:::{.fragment}
+Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
+:::
+::: {.incremental}
+- Estados de spin no tempo 𝑡, $\xi_t:\mathcal{V}\to{−1,1}\,;$
+- Magnetização local, $\phi(\mathbf{x}_i,t)=\frac{1}{M}\sum_{j\in M_{\delta}(i)}\xi_t(j)\,;$
+- *Consenso:* $$\lim_{t\to\infty}\text{P}\big[\xi_t(i)\not=\xi_t(j)\big]\to0\,,\quad\forall i\not=j\in\mathcal{V}\,;$$
+- *Fragmentação:* $$\lim_{t\to\infty}\text{P}\big[\xi_t(i)\not=\xi_t(j)\big]>0\,,\quad\forall i\not=j\in\mathcal{V}\,;$$
+:::
+
+##
+- *Fase paramagnética:* $$\lim_{t\to\infty}\text{E}\big[\phi(\mathbf{x}_i)\big]=0\,,\quad\forall i\in\mathcal{V}\,;$$
+- *Fase ferromagnética:* $$\lim_{t\to\infty}\text{E}\big[\phi(\mathbf{x}_i)\big]=\pm1\,,\quad\forall i\in\mathcal{V}\,;$$
+
+
+## [Classe GV]{.title-sec}
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar/phases-potential_1.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+## [Classe GV]{.title-sec}
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar/phases-potential_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+## [Classe GV]{.title-sec}
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar/phases-potential_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+## [Classe GV]{.title-sec}
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar/phases-potential_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+
+
+
+##
+{{< MakeChapter
+  numbering="02"
+  titulo="Apresentando o <i>q</i>-Votante" 
+  desc="Um modelo não-linear de dinâmica de opiniões."
+  img="https://assets.tmfss.net/pos-seminar/fractal-dyn-voter.svg"
+>}}
+
+## [Regra de atualização]{.title-sec}
+
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_5.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_6.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+
+## [Regra de atualização]{.title-sec}
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_5.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_6.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
 
 ## [Caos e Física]{.title-sec}
