@@ -4,3 +4,4 @@
 /.luarc.json
 /index_files/
 /site_libs/
+*.svg
