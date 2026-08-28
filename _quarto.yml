@@ -10,7 +10,7 @@ description: "Introdução aos Sistemas Caóticos"
 lang: pt-BR
 
 bibliography: room/references.bib
-csl: https://www.zotero.org/styles/ieee
+csl: https://www.zotero.org/styles/nature-brackets
 
 format:
     revealjs:
