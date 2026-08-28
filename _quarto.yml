@@ -16,7 +16,6 @@ format:
     revealjs:
         mainfont: "TeX Gyre Pagella"
         no-clean: true
-        output-file: slides
         theme: dark
         logo: "https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg"
         css: "room/slides-theme.css"
