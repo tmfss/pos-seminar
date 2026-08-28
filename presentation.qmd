@@ -58,32 +58,175 @@ Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
 - *Fragmentação:* $$\lim_{t\to\infty}\text{P}\big[\xi_t(i)\not=\xi_t(j)\big]>0\,,\quad\forall i\not=j\in\mathcal{V}\,;$$
 :::
 
-##
+<!-- ##
 - *Fase paramagnética:* $$\lim_{t\to\infty}\text{E}\big[\phi(\mathbf{x}_i)\big]=0\,,\quad\forall i\in\mathcal{V}\,;$$
 - *Fase ferromagnética:* $$\lim_{t\to\infty}\text{E}\big[\phi(\mathbf{x}_i)\big]=\pm1\,,\quad\forall i\in\mathcal{V}\,;$$
+-->
+
+## [O modelo do Votante]{.title-sec}
+::: {.columns}
+
+::: {.column width="50%"}
+![](https://assets.tmfss.net/pos-seminar/fractal-dyn-voter.svg){.fragment width="100%" .absolute top=50 left="-75%" right=0 style="margin: auto;"}
+:::
+
+::: {.column width="50%"}
+### Propriedades chave
+::: {.incremental}
+- Domínios "fractais";
+- Dinâmica de Glauber (Ising Model)
+- Ponto crítico
+:::
+:::
+:::
+
+## [Generalizando o modelo do Votante]{.title-sec}
+
+:::{.fragment}
+Consideramos um campo $\phi(\mathbf{x},t)\in[-1,1]$:
+:::
+::: {.incremental}
+- Simetria $Z_2$: $\phi\to-\phi\,;$
+- Estados absorventes em $\phi = 1$ e $\phi=-1\,;$
+- Ponto de partida: Model A! :)
+:::
+
+## [Model-A relembrado]{.title-sec}
+
+:::{.fragment}
+Transições no *Model A* de Hohenberg-Halperin: sistema *sem* quantidades conservadas, dinâmica relaxacional.
+:::
+::: {.incremental}
+- Classificação de *Hohenberg-Halperin* para dinâmicas críticas;
+- Descreve sistemas cujo parâmetro de ordem *não é conservado*;
+- Dinâmica puramente *relaxacional* (minimiza a energia livre rumo ao equilíbrio);
+- Equivale no contínuo à *Dinâmica de Glauber* (flip de spins isolados);
+- **Nota importante:** vamos ignorar alguns termos cruciais, como as derivadas do campo, $|\nabla\phi|^2$.
+:::
+
+## [Model-A revisto]{.title-sec}
+:::{.fragment data-fragment-index="1"}
+<!-- Nos slides vou ignorar o termo |\nabla\phi|^2, para simplificar um pouco -->
+Definimos a energia livre com simetria $Z_2$: $$F[\phi] = \int\mathrm{d}^dx\left\{\frac{a}{2}\phi^2 + \frac{b}{4}\phi^4\right\}\,;$$
+:::
+:::{.fragment data-fragment-index="2"}
+Obtemos a equação de Langevin:
+:::
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out data-fragment-index="3"}
+$$\partial_t\phi = -\frac{\delta F}{\delta\phi} + \sigma\theta^{\text{r}}(t)$$
+:::
+::: {.fragment .fade-in-then-out data-fragment-index="4"}
+$$\partial_t\phi = -\frac{\delta F}{\delta\phi} + \overbrace{\sigma\theta^{\text{r}}(t)}^{\text{Ruído gaussiano}}$$
+:::
+::: {.fragment data-fragment-index="5"}
+$$\partial_t\phi = \underbrace{-\frac{\delta F}{\delta\phi}}_{\text{Minimização de $F$}} + \overbrace{\sigma\theta^{\text{r}}(t)}^{\text{Ruído gaussiano}}$$
+:::
+:::
+::: {.fragment data-fragment-index="6"}
+Ainda faltam os estados absorventes em $\phi = 1$ e $\phi=-1\,.$
+:::
+
+## [Model-A Revisto]{.title-sec}
+:::{.fragment}
+<!-- Nos slides vou ignorar o termo |\nabla\phi|^2, para simplificar um pouco -->
+Inserindo (*ad hoc*) os estados absorventes: $(\phi+1)$ e $(\phi-1)$.
+:::
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+$$\text{"Force"} = -\frac{\delta F}{\delta\phi} = -\big(a\phi + b\phi^3\big)$$
+:::
+::: {.fragment .fade-in-then-out}
+$$\text{"Force"} = -\frac{\delta F}{\delta\phi} = -\big(a\phi + b\phi^3\big) \color{red}{\big(1-\phi^2\big)}$$
+:::
+::: {.fragment .fade-in-then-out}
+$$\text{"Force"} = -\frac{\delta F}{\delta\phi} = - \left[a\phi + (b-\color{red}{a})\phi^3 - \color{red}{b\phi^5}\right]$$
+:::
+::: {.fragment .fade-in-then-out}
+$$
+\begin{align*}
+\text{"Model A Force"} =-\frac{\delta F}{\delta\phi} &= - \big(a\phi + b\phi^3\big)\\
+\text{"GV Model Force"} =-\frac{\delta F}{\delta\phi} &= - \left[a\phi + (b-\color{red}{a})\phi^3 - \color{red}{b\phi^5}\right]
+\end{align*}
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+$$
+\begin{align*}
+\text{"Model A Force"} =-\frac{\delta F}{\delta\phi} &= - \underbrace{\big(a\phi + b\phi^3\big)}_{\implies F = \frac{a}{2}\phi^2+\frac{b}{4}\phi^4}\\
+\text{"GV Model Force"} =-\frac{\delta F}{\delta\phi} &= - \left[a\phi + (b-\color{red}{a})\phi^3 - \color{red}{b\phi^5}\right]
+\end{align*}
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+$$
+\begin{align*}
+\text{"Model A Force"} =-\frac{\delta F}{\delta\phi} &= - \underbrace{\big(a\phi + b\phi^3\big)}_{\implies F = \frac{a}{2}\phi^2+\frac{b}{4}\phi^4}\\
+\text{"GV Model Force"} =-\frac{\delta F}{\delta\phi} &= - \underbrace{\left[a\phi + (b-\color{red}{a})\phi^3 - \color{red}{b\phi^5}\right]}_{\implies 
+  \frac{a}{2}\phi^2 + \frac{a-\color{red}{b}}{4}\phi^4 + \color{red}{\frac{b}{6}\phi^6}}
+\end{align*}
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+$$
+\begin{align*}
+\text{"Model A Potential"} = F[\phi] &= \int \mathrm{d}^dx\left\{\frac{a}{2}\phi^2+\frac{b}{4}\phi^4\right\}\\
+\text{"GV Model Force"} = -\frac{\delta F}{\delta\phi}& = - \underbrace{\left[a\phi + (b-\color{red}{a})\phi^3 - \color{red}{b\phi^5}\right]}_{\implies 
+  \frac{a}{2}\phi^2 + \frac{a-\color{red}{b}}{4}\phi^4 + \color{red}{\frac{b}{6}\phi^6}}
+\end{align*}
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+$$
+\begin{align*}
+\text{"Model A Potential"} =& F[\phi] = \int \mathrm{d}^dx\left\{\frac{a}{2}\phi^2+\frac{b}{4}\phi^4\right\}\\
+\text{"GV Model Potential"} =& F[\phi] = \int \mathrm{d}^dx\left\{\frac{a}{2}\phi^2 + \frac{a-\color{red}{b}}{4}\phi^4 + \color{red}{\frac{b}{6}\phi^6}\right\}
+\end{align*}
+$$
+:::
+
+::: {.fragment}
+Finalmente, ficamos com o potencial efetivo:
+$$
+V(\phi;a,b) = \frac{a}{2}\phi^2 + \frac{a-\color{red}{b}}{4}\phi^4 + \color{red}{\frac{b}{6}\phi^6}
+$$
+:::
+:::
 
 
-## [Classe GV]{.title-sec}
+## [Classe GV]{.title-sec} {data-transition="fade"}
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar/mean-field-diagram_1.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+## [Classe GV]{.title-sec} {data-transition="fade"}
+::: {.fragment}
+$$V = \frac{a}{2}\phi^2 + \frac{a-b}{4}\phi^4 + \frac{b}{6}\phi^6$$
+:::
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
 ![](https://assets.tmfss.net/pos-seminar/phases-potential_1.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
 
-## [Classe GV]{.title-sec}
+## [Classe GV]{.title-sec} {data-transition="fade"}
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/phases-potential_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/phases-potential_2.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
 
-## [Classe GV]{.title-sec}
+## [Classe GV]{.title-sec} {data-transition="fade"}
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/phases-potential_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/phases-potential_4.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
 
-## [Classe GV]{.title-sec}
+## [Classe GV]{.title-sec} {data-transition="fade"}
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/phases-potential_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/phases-potential_3.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
-
-
 
 
 ##
@@ -93,6 +236,19 @@ Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
   desc="Um modelo não-linear de dinâmica de opiniões."
   img="https://assets.tmfss.net/pos-seminar/fractal-dyn-voter.svg"
 >}}
+
+## [Regra de atualização]{.title-sec}
+::: {.fragment}
+Dada uma rede $(\mathcal{V},\mathcal{E})$:
+:::
+::: {.incremental}
+- A um dado tempo $t$, escolha um nó $i\in\mathcal{V}$;
+- Escolha aleatoriamente $q$ vizinhos do nó $i$ (com possibilidade de repetição);
+    - Se todos os $q$ vizinhos estiverem no mesmo estado, o agente copia seus vizinhos;
+    - Caso os $q$ vizinhos não estejam no mesmo estado, o agente muda com probabilidade $\varepsilon$;
+- O tempo é atualizado $t\leftarrow t+1/N$.
+
+:::
 
 ## [Regra de atualização]{.title-sec}
 
@@ -114,324 +270,3 @@ Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
 ![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_6.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
 
-## [Caos e Física]{.title-sec}
-
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh; text-align: center;"}
-
-[Vamos atrás de uma resposta a partir do estudo de pêndulos...]{style="font-size: 1.5em; margin-bottom: 20px;"}
-
-:::
-
-##
-{{< MakeChapter
-  numbering="02"
-  titulo="Pêndulos"
-  desc="Os problemas do pêndulo simples e do pêndulo duplo."
-  img="https://upload.wikimedia.org/wikipedia/commons/1/17/Chaos_Theory_%26_Double_Pendulum_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
->}}
-
-## [O Pêndulo Simples]{.title-sec}
-
-::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/sp_diagram_1.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/sp_diagram_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/sp_diagram_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/sp_diagram_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-[$$E = \frac{1}{2} m v^2 + mgL(1-\cos\theta)$$]{.fragment}
-:::
-
-## [O Pêndulo Simples]{.title-sec}
-
-{{< InsertVideo 
-  PATH="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_pequeno.webm"
-  type="Pêndulo simples:"
-  desc="Condições iniciais $\theta=17^\circ$, $v=0$."
->}}
-
-## [O Pêndulo Simples]{.title-sec}
-{{< InsertVideo 
-  PATH="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_medio.webm"
-  type="Pêndulo simples:"
-  desc="Condições iniciais $\theta=90^\circ$, $v=0$."
->}}
-
-## [O Pêndulo Simples]{.title-sec}
-{{< InsertVideo 
-  PATH="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_extremo.webm"
-  type="Pêndulo simples:"
-  desc="Condições iniciais $\theta=170^\circ$, $v=0$."
->}}
-
-## [O Pêndulo Simples]{.title-sec}
-{{< InsertColumn3
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_pequeno.webm"
-    desc1="Pêndulo, $\theta=17^\circ$"
-    src2="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_medio.webm"
-    desc2="Pêndulo, $\theta=90^\circ$"
-    src3="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_extremo.webm"
-    desc3="Pêndulo, $\theta=170^\circ$"
->}}
-[Mas e se darmos mais energia inicial aos nossos pêndulos?]{.fragment}
-
-## [O Pêndulo Simples]{.title-sec}
-Vamos lembrar,
-[$$E = T + V$$]{.fragment}
-[$$V=:\, \text{Energia potencial!}$$]{.fragment}
-[$$T=:\, \text{Energia cinética!}$$]{.fragment}
-[$$T=\frac{1}{2}mv^2$$]{.fragment}
-[Vamos soltar o pêndulo com alguma velocidade inicial!]{.fragment}
-
-## [O Pêndulo Simples]{.title-sec}
-
-Vamos explorar a ideia...
-{{< InsertColumn3
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_increment_vel_1.webm"
-    desc1="Pêndulo, $\theta=20^\circ, v=2$m/s"
-    src2="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_increment_vel_2.webm"
-    desc2="Pêndulo, $\theta=20^\circ, v=5$m/s"
-    src3="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_increment_vel_3.webm"
-    desc3="Pêndulo, $\theta=20^\circ, v=8$m/s"
->}}
-
-## [O Pêndulo Simples]{.title-sec}
-{{< InsertColumn3
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_pequeno_fast.webm"
-    desc1="Pêndulo, $\theta=17^\circ, v=8$m/s"
-    src2="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_medio_fast.webm"
-    desc2="Pêndulo, $\theta=90^\circ, v=8$m/s"
-    src3="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_extremo_fast.webm"
-    desc3="Pêndulo, $\theta=170^\circ, v=8$m/s"
->}}
-
-## [O que podemos aprender com o pêndulo simples?]{.title-sec}
-
-::::{style="display: flex; justify-content: space-around; align-items: center;"}
-::: {.incremental}
-- Precisamos estudar a posição da massa, $\theta$ 
-- Bem como a sua velocidade, $v$
-- Podemos escrever *movimentos diferentes* para cada par $(\theta,v)$
-- A energia tem grande influência no movimento resultante.
-:::
-::::
-
-##
-{{< MakeChapter 
-  numbering="03" 
-  titulo="Espaço de Fase" 
-  desc="Descrevendo as possíveis dinâmicas diferentes de um sistema."
-  img="https://assets.tmfss.net/chaosminicurse/figs/poincare_img.svg" 
->}}
-
-##  [Construindo o Espaço de Fase]{.title-sec}
-{{< VideoImage
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_pequeno.webm"
-    desc1="Pêndulo, $\theta=17^\circ, v=0$"
-    src2="https://assets.tmfss.net/chaosminicurse/figs/phase_1.svg"
-    desc2="Visualização do movimento com o par $(\theta,v)$"
->}}
-
-##  [Construindo o Espaço de Fase]{.title-sec}
-{{< VideoImage
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_medio.webm"
-    desc1="Pêndulo, $\theta=90^\circ, v=0$"
-    src2="https://assets.tmfss.net/chaosminicurse/figs/phase_2.svg"
-    desc2="Visualização do movimento com o par $(\theta,v)$"
->}}
-
-##  [Construindo o Espaço de Fase]{.title-sec}
-{{< VideoImage
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_extremo.webm"
-    desc1="Pêndulo, $\theta=170^\circ, v=0$"
-    src2="https://assets.tmfss.net/chaosminicurse/figs/phase_3.svg"
-    desc2="Visualização do movimento com o par $(\theta,v)$"
->}}
-
-##  [Construindo o Espaço de Fase (Alta Energia)]{.title-sec}
-{{< VideoImage
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_pequeno_fast.webm"
-    desc1="Pêndulo, $\theta=17^\circ, v=8$ m/s"
-    src2="https://assets.tmfss.net/chaosminicurse/figs/phase_4.svg"
-    desc2="Visualização do movimento com o par $(\theta,v)$"
->}}
-
-##  [Construindo o Espaço de Fase (Alta Energia)]{.title-sec}
-{{< VideoImage
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_medio_fast.webm"
-    desc1="Pêndulo, $\theta=90^\circ, v=8$ m/s"
-    src2="https://assets.tmfss.net/chaosminicurse/figs/phase_5.svg"
-    desc2="Visualização do movimento com o par $(\theta,v)$"
->}}
-
-##  [Construindo o Espaço de Fase (Alta Energia)]{.title-sec}
-{{< VideoImage
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_simple_extremo_fast.webm"
-    desc1="Pêndulo, $\theta=170^\circ, v=8$ m/s"
-    src2="https://assets.tmfss.net/chaosminicurse/figs/phase_6.svg"
-    desc2="Visualização do movimento com o par $(\theta,v)$"
->}}
-
-
-## [O Espaço de Fase]{.title-sec}
-
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/phase_full.svg){width="100%"}
-
-[O mapa que nos mostra *tudo o que o pêndulo pode fazer*!]{.fragment style="color: #adb5bd;"}
-:::
-
-## [Recaptulando o Espaço de Fase]{.title-sec}
-
-::::{style="display: flex; justify-content: space-around; align-items: center;"}
-::: {.incremental}
-- Temos **toda** informação do sistema!
-- As curvas no espaço de fase representam os pontos que aquele movimento visita.
-- A energia determina a região do espaço de fase que será visitada.
-:::
-::::
-
-## [O Pêndulo Duplo]{.title-sec}
-
-::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/dp_diagram_1.svg){.fragment width="90%" .absolute top=-70 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/dp_diagram_2.svg){.fragment width="90%" .absolute top=-70 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/dp_diagram_3.svg){.fragment width="90%" .absolute top=-70 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/dp_diagram_4.svg){.fragment width="90%" .absolute top=-70 left=0 right=0 style="margin: auto;"}
-:::
-
-## [O Pêndulo Duplo]{.title-sec}
-::: {.fragment style="display: flex; justify-content: space-around; align-items: center;"}
-$$
-\begin{aligned}
-E &= \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2v_2^2 + 2 v_1v_2\cos(\theta_1 - \theta_2) \\
-  &\quad - (m_1 + m_2) g l_1 \cos\theta_1 - m_2 g l_2 \cos\theta_2
-\end{aligned}
-$$
-:::
-
-## [O Pêndulo Duplo]{.title-sec}
-
-<video data-autoplay muted loop playsinline controls width="100%">
-  <source src="https://assets.tmfss.net/chaosminicurse/ani/trajec_unstable_1.webm" type="video/webm">
-    Seu navegador não suporta a tag de vídeo.
-</video>
-
-##  [O Pêndulo Duplo]{.title-sec}
-{{< VideoVideo
-    src1="https://assets.tmfss.net/chaosminicurse/ani/trajec_dp_4530.webm"
-    desc1="Pêndulo, $\theta=170^\circ, v=8$ m/s"
-    src2="https://assets.tmfss.net/chaosminicurse/ani/trajec_dp_4630.webm"
-    desc2="Visualização do movimento com o par $(\theta,v)$"
->}}
-
-##
-{{< MakeChapter 
-  numbering="04" 
-  titulo="Fronteira do Caos" 
-  desc="Transição para desordem: expoentes de Lyapunov e seções de Poincaré"
-  img="https://upload.wikimedia.org/wikipedia/pt/0/03/Close_to_the_Edge_-_Yes.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" 
->}}
-
-## [Sensibilidade às condições iniciais]{.title-sec}
-
-<video data-autoplay muted loop playsinline width="100%">
-  <source src="https://assets.tmfss.net/chaosminicurse/ani/trajec_chaos.webm" type="video/webm">
-    Seu navegador não suporta a tag de vídeo.
-</video>
-
-## [Sensibilidade às condições iniciais]{.title-sec}
-
-<video data-autoplay muted loop playsinline width="100%">
-  <source src="https://assets.tmfss.net/chaosminicurse/ani/trajec_chaos.webm" type="video/webm">
-    Seu navegador não suporta a tag de vídeo.
-</video>
-
-## [Flip]{.title-sec}
-
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/phase_position_flip.svg){width="100%"}
-
-[Diagrama de "flip"]{.fragment style="color: #adb5bd;"}
-:::
-
-## [Lyapunov]{.title-sec}
-
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/phase_position_lya.svg){width="100%"}
-
-[Expoentes de Lyapunov]{.fragment style="color: #adb5bd;"}
-:::
-
-## [Flip]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/phase_moment_flip.svg){width="100%"}
-
-[Diagrama de "flip"]{.fragment style="color: #adb5bd;"}
-:::
-
-## [O Espaço de Fase]{.title-sec}
-
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/phase_moment_lya.svg){width="100%"}
-
-[Expoentes de Lyapunov]{.fragment style="color: #adb5bd;"}
-:::
-
-## [Entendendo]{.title-sec}
-
-::::{style="display: flex; justify-content: space-around; align-items: center;"}
-::: {.incremental}
-- O que o mapa de "flip" nos diz?
-- O que o mapa de Lyapunov nos diz?
-- Qual o papel da energia?
-:::
-::::
-
-## [Seções de Poincaré]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/poincare_section_E1.svg){width="100%"}
-
-[Seção de Poincaré]{style="color: #adb5bd;"}
-:::
-
-## [Seções de Poincaré]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/poincare_section_E2.svg){width="100%"}
-
-[Seção de Poincaré]{style="color: #adb5bd;"}
-:::
-
-## [Seções de Poincaré]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/poincare_section_E3.svg){width="100%"}
-
-[Seção de Poincaré]{style="color: #adb5bd;"}
-:::
-
-## [Seções de Poincaré]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/poincare_section_E4.svg){width="100%"}
-
-[Seção de Poincaré]{style="color: #adb5bd;"}
-:::
-
-## [Seções de Poincaré]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/poincare_section_E5.svg){width="100%"}
-
-[Seção de Poincaré]{style="color: #adb5bd;"}
-:::
-
-## [Seções de Poincaré]{.title-sec}
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh;"}
-![](https://assets.tmfss.net/chaosminicurse/figs/poincare_section_E6.svg){width="100%"}
-
-[Seção de Poincaré]{style="color: #adb5bd;"}
-:::
-
-##
-{{< MakeChapter 
-  numbering="05" 
-  titulo="Conclusão" 
-  desc="Enxergando caos na natureza"
-  img="https://upload.wikimedia.org/wikipedia/pt/0/03/Close_to_the_Edge_-_Yes.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" 
->}}
