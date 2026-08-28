@@ -21,7 +21,7 @@
         \foreach \i in {1,...,#2} {
             \draw[line width=0.08em, white, fill=DBlue] (poly.corner \i) circle (0.5em);
         }
-        \node at (0,-2em) {#3};
+        \node[white, font=\bfseries] at (0,-2em) {#3};
     \end{scope}
 }
 
@@ -35,7 +35,7 @@
         }
             \draw[line width=0.08em, white, fill=DBlue] (poly.corner \i) circle (0.5em);
         }
-        \node at (0,-2em) {#3};
+        \node[white, font=\bfseries] at (0,-2em) {#3};
     \end{scope}
 }
 
@@ -48,7 +48,7 @@
         \draw[#3, ultra thick] (top) -- (bottom);
         \draw[line width=0.08em, white, fill=DBlue] (top) circle (0.5em);
         \draw[line width=0.08em, white, fill=DBlue] (bottom) circle (0.5em);
-        \node at (0,-2em) {#2};
+        \node[white, font=\bfseries] at (0,-2em) {#2};
     \end{scope}
 }
 
@@ -59,7 +59,7 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,5)}]
-        \node[font=\large\bfseries] at (0,10em) {Higher-order interactions};
+        \node[white, ont=\large\bfseries] at (0,10em) {Higher-order interactions};
         \DrawPair[-24][Dyadic interaction][LBlue]
         \DrawPolyadic[-12][3][Triadic interaction]
         \DrawPolyadic[0][4][Tetradic interaction]
@@ -73,7 +73,7 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,-13)}]
-        \node[font=\large\bfseries] at (0,10em) {Simplicial Complex};
+        \node[white, ont=\large\bfseries] at (0,10em) {Simplicial Complex};
         \DrawPair[-24][2-Simplex]
         \DrawSimplicialComplex[-12][3][3-Simplex]
         \DrawSimplicialComplex[0][4][4-Simplex]
@@ -91,7 +91,7 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,3)}]
-        \node[font=\large\bfseries] at (0,12em) {Higher-order network};
+        \node[white, ont=\large\bfseries] at (0,12em) {Higher-order network};
         \begin{scope}[shift={(-4.5*\Xlim,\Ylim)}, name prefix=node-]
             \coordinate (1) at (0,\Ylim);
             \coordinate (2) at (\Xlim,0);
@@ -153,7 +153,7 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,-13)}]
-        \node[font=\large\bfseries] at (0,12em) {Simplicial Complex};
+        \node[white, ont=\large\bfseries] at (0,12em) {Simplicial Complex};
         \begin{scope}[shift={(-4.5*\Xlim,\Ylim)}, name prefix=node-]
             \coordinate (1) at (0,\Ylim);
             \coordinate (2) at (\Xlim,0);
