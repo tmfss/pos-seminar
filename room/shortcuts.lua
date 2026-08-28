@@ -28,7 +28,7 @@ return {
 <div class="linha-gradiente"> </div>
 <div class="subtitulo"> %s </div> 
 <h1 class="titulo-principal"> %s </h1> 
-<p style="color: #8c9baf; font-size: 1.2em;"> %s </p> 
+<p style="color: #FFFFFF; font-size: 1.2em;"> %s </p> 
 <div style="display: flex; justify-content: flex-end;">
 <div class="caixa-logos">
 %s</div>
