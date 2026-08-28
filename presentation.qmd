@@ -134,7 +134,7 @@ Ainda faltam os estados absorventes em $\phi = 1$ e $\phi=-1\,.$
 <!-- Nos slides vou ignorar o termo |\nabla\phi|^2, para simplificar um pouco -->
 Inserindo (*ad hoc*) os estados absorventes: $(\phi+1)$ e $(\phi-1)$.
 :::
-::: {.r-stack}
+::: {.r-stack style="align-items: center;"}
 ::: {.fragment .fade-in-then-out}
 $$\text{"Force"} = -\frac{\delta F}{\delta\phi} = -\big(a\phi + b\phi^3\big)$$
 :::
