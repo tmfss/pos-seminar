@@ -25,6 +25,15 @@ format:
         slide-number: true
         chalkboard:
             buttons: true
-        preview-links: auto
+        preview-links: auto            
+        html-math-method: mathjax
         include-in-header:
-            text: '<link rel="icon" href="https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg" type="image/svg+xml">'
+         - text: '<link rel="icon" href="https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg" type="image/svg+xml">'
+         - text: |
+              <script>
+              window.MathJax = {
+                  loader: { load: ['[tex]/ams', 'output/chtml', 'ui/menu'] },
+                  chtml: { font: 'mathjax-pagella' },
+                  svg: { font: 'mathjax-pagella' }
+                };
+              </script>
