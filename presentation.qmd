@@ -58,11 +58,6 @@ Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
 - *Fragmentação:* $$\lim_{t\to\infty}\text{P}\big[\xi_t(i)\not=\xi_t(j)\big]>0\,,\quad\forall i\not=j\in\mathcal{V}\,;$$
 :::
 
-<!-- ##
-- *Fase paramagnética:* $$\lim_{t\to\infty}\text{E}\big[\phi(\mathbf{x}_i)\big]=0\,,\quad\forall i\in\mathcal{V}\,;$$
-- *Fase ferromagnética:* $$\lim_{t\to\infty}\text{E}\big[\phi(\mathbf{x}_i)\big]=\pm1\,,\quad\forall i\in\mathcal{V}\,;$$
--->
-
 ## [O modelo do Votante]{.title-sec}
 ::: {.columns}
 
@@ -88,19 +83,19 @@ Consideramos um campo $\phi(\mathbf{x},t)\in[-1,1]$:
 ::: {.incremental}
 - Simetria $Z_2$: $\phi\to-\phi\,;$
 - Estados absorventes em $\phi = 1$ e $\phi=-1\,;$
-- Ponto de partida: Model A!
+- Ponto de partida: Model A!^[@hohenberg_1977]
 :::
 
 ## [Model-A relembrado]{.title-sec}
 
 :::{.fragment}
-Transições no *Model A* de Hohenberg-Halperin: sistema *sem* quantidades conservadas, dinâmica relaxacional.
+Por que o *Model A* de Hohenberg-Halperin? 
 :::
 ::: {.incremental}
-- Classificação de *Hohenberg-Halperin* para dinâmicas críticas;
-- Descreve sistemas cujo parâmetro de ordem *não é conservado*;
-- Dinâmica puramente *relaxacional* (minimiza a energia livre rumo ao equilíbrio);
+- Sistemas cujo parâmetro de ordem *não é conservado*, mas tem alguma simetria;
+- Dinâmica puramente *relaxacional*;
 - Equivale no contínuo à *Dinâmica de Glauber* (flip de spins isolados);
+- Ginzburg-Landau dependente do tempo: $$\partial_t\phi = -\frac{\delta F}{\delta\phi} + \sigma\theta^{\text{r}}(t)\,;$$
 - **Nota importante:** vamos ignorar alguns termos cruciais, como as derivadas do campo, $|\nabla\phi|^2$.
 :::
 
@@ -228,7 +223,7 @@ $$V = \frac{a}{2}\phi^2 + \frac{a-b}{4}\phi^4 + \frac{b}{6}\phi^6$$
   numbering="02"
   titulo="Apresentando o <i>q</i>-Votante" 
   desc="Um modelo não-linear de dinâmica de opiniões."
-  img="https://assets.tmfss.net/pos-seminar/fractal-dyn-voter.svg"
+  img="https://assets.tmfss.net/pos-seminar/cover-q-voter.jpg"
 >}}
 
 ## [Regra de atualização]{.title-sec}
@@ -264,3 +259,25 @@ Dada uma rede $(\mathcal{V},\mathcal{E})$:
 ![](https://assets.tmfss.net/pos-seminar/rule-discordancia_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
 
+
+
+##
+{{< MakeChapter
+  numbering="05"
+  titulo="Perspectivas do trabalho"
+  desc="Ordem superior, amostragem estocástica e massa crítica."
+  img="https://assets.tmfss.net/pos-seminar/cover-q-voter.jpg"
+>}}
+
+## [Hihger-order interactions]{.title-sec}
+::: {.r-stack}
+::: {.fragment .fade-out fragment-index=3}
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_1.svg){.fragment fragment-index=1 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_2.svg){.fragment fragment-index=2 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::
+
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_3.svg){.fragment fragment-index=3 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_4.svg){.fragment fragment-index=4 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::
+
+## Referências
