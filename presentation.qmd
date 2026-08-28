@@ -4,14 +4,14 @@ shortcodes:
   - room/shortcuts.lua
 ---
 
-##
+## {data-transition="fade"}
 {{< 
   PresentationCover
   title="Modelo q-Votante <br> e ordem superior"
   author="Timóteo Fassoni, Silvio Ferreira e Wesley Cota"
   where="Seminário da Pós"
   logo="https://assets.tmfss.net/logos/IbitiLogoBlue.svg, https://assets.tmfss.net/logos/gisc/dark.svg, https://assets.tmfss.net/logos/ufv/white.png"
-  back_img="https://www.popsci.com/wp-content/uploads/2024/04/03/chaotic-galaxy.jpg?quality=85"
+  back_img="https://parquedoibitipoca.com.br/wp-content/uploads/2023/08/foto-Janela-do-Ceu-scaled-e1691778304126.jpg"
 >}}
 <div class="div-bottom-centro">
   <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Identidade_Visual_CAPES.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="CAPES" >
@@ -19,7 +19,7 @@ shortcodes:
   <img src="https://api.site.fapemig.br/wp-content/uploads/LOGO-FAPEMIG-SITE-1.png" alt="FAPEMIG" >
 </div>
 
-## [Conteúdo]{.title-sec} Índice geral
+## [Conteúdo]{.title-sec} Índice geral {data-transition="fade"}
 {{< MakeIndex 
   "Revisitando o Votante" "Modelo do Votante, transições de fase e a classe GV."
   "Apresentando o <i>q</i>-Votante" "Um modelo não-linear de dinâmica de opiniões."
@@ -88,7 +88,7 @@ Consideramos um campo $\phi(\mathbf{x},t)\in[-1,1]$:
 ::: {.incremental}
 - Simetria $Z_2$: $\phi\to-\phi\,;$
 - Estados absorventes em $\phi = 1$ e $\phi=-1\,;$
-- Ponto de partida: Model A! :)
+- Ponto de partida: Model A!
 :::
 
 ## [Model-A relembrado]{.title-sec}
@@ -199,35 +199,29 @@ $$
 :::
 :::
 
-
-## [Classe GV]{.title-sec} {data-transition="fade"}
-::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/mean-field-diagram_1.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-:::
-
-## [Classe GV]{.title-sec} {data-transition="fade"}
-::: {.fragment}
+## [Classe GV]{.title-sec}
+::: {.r-stack}
+::: {.fragment .fade-out fragment-index=3}
+::: {.fragment fragment-index=1}
 $$V = \frac{a}{2}\phi^2 + \frac{a-b}{4}\phi^4 + \frac{b}{6}\phi^6$$
 :::
-::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/phases-potential_1.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+::: {.fragment fragment-index=2}
+![](tikz/phases-potential_1.svg){width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
-
-## [Classe GV]{.title-sec} {data-transition="fade"}
-::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/phases-potential_2.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
+![](tikz/phases-potential_2.svg){.fragment .fade-in-then-out fragment-index=3 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](tikz/phases-potential_5.svg){.fragment .fade-in-then-out fragment-index=4 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 
-## [Classe GV]{.title-sec} {data-transition="fade"}
-::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/phases-potential_4.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+::: {.fragment .fade-out fragment-index=7}
+::: {.fragment fragment-index=5}
+![](tikz/phases-potential_3.svg){width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
-
-## [Classe GV]{.title-sec} {data-transition="fade"}
-::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/phases-potential_3.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+::: {.fragment fragment-index=6}
+![](tikz/phases-potential_4.svg){width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
-
+:::
+![](https://assets.tmfss.net/pos-seminar/mean-field-diagram_1.svg){.fragment .fade-in-then-out fragment-index=7 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::
 
 ##
 {{< MakeChapter
@@ -253,20 +247,20 @@ Dada uma rede $(\mathcal{V},\mathcal{E})$:
 ## [Regra de atualização]{.title-sec}
 
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_5.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_6.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-consenco_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
 
 
 ## [Regra de atualização]{.title-sec}
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_2.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_3.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_4.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_5.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_6.svg){.fragment width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar-imgs/rule-discordancia_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
 
