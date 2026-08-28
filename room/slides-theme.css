@@ -6,7 +6,7 @@
     margin-bottom: 20px;
   }
   .boxing {
-    background-color: rgba(20, 28, 43, 0.4);
+    background-color: rgba(20, 28, 43, 0.6);
     border-radius: 15px;
     padding: 20px 20px;
     border: 1px solid rgba(255,255,255,0.05);
@@ -101,11 +101,11 @@ background: linear-gradient(90deg, #1E90FF, #FF1493);
 .title-sec {
   display: block; /* A mágica que substitui o <br> ou tags HTML */
   color: #4da6ff;
-  font-size: 0.4em; /* Reduzido porque o h2 base já tem um tamanho grande */
+  font-size: 0.3em; /* Reduzido porque o h2 base já tem um tamanho grande */
   font-weight: 700;
   letter-spacing: 2px;
   font-family: monospace;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   padding-top: 10px;
 }
