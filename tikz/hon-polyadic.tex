@@ -59,7 +59,7 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,5)}]
-        \node[white, ont=\large\bfseries] at (0,10em) {Higher-order interactions};
+        \node[white,  font=\large\bfseries] at (0,10em) {Higher-order interactions};
         \DrawPair[-24][Dyadic interaction][LBlue]
         \DrawPolyadic[-12][3][Triadic interaction]
         \DrawPolyadic[0][4][Tetradic interaction]
@@ -73,12 +73,12 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,-13)}]
-        \node[white, ont=\large\bfseries] at (0,10em) {Simplicial Complex};
-        \DrawPair[-24][2-Simplex]
-        \DrawSimplicialComplex[-12][3][3-Simplex]
-        \DrawSimplicialComplex[0][4][4-Simplex]
-        \DrawSimplicialComplex[12][5][5-Simplex]
-        \DrawSimplicialComplex[24][6][6-Simplex]
+        \node[white,  font=\large\bfseries] at (0,10em) {All-to-all pair approximation};
+        \DrawPair[-24][$K_2$]
+        \DrawSimplicialComplex[-12][3][$K_3$]
+        \DrawSimplicialComplex[0][4][$K_4$]
+        \DrawSimplicialComplex[12][5][$K_5$]
+        \DrawSimplicialComplex[24][6][$K_6$]
     \end{scope}
 \end{tikzpicture}
 
@@ -91,7 +91,7 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,3)}]
-        \node[white, ont=\large\bfseries] at (0,12em) {Higher-order network};
+        \node[white,  font=\large\bfseries] at (0,12em) {Higher-order network};
         \begin{scope}[shift={(-4.5*\Xlim,\Ylim)}, name prefix=node-]
             \coordinate (1) at (0,\Ylim);
             \coordinate (2) at (\Xlim,0);
@@ -153,7 +153,7 @@
     \useasboundingbox (-31,-17) rectangle (31,17);
 
     \begin{scope}[shift={(0,-13)}]
-        \node[white, ont=\large\bfseries] at (0,12em) {Simplicial Complex};
+        \node[white,  font=\large\bfseries] at (0,12em) {All-to-all pair approximation};
         \begin{scope}[shift={(-4.5*\Xlim,\Ylim)}, name prefix=node-]
             \coordinate (1) at (0,\Ylim);
             \coordinate (2) at (\Xlim,0);
