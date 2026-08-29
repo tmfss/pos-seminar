@@ -1,0 +1,157 @@
+\documentclass[tikz, border=0]{standalone}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usetikzlibrary{calc,arrows.meta,patterns, shapes.geometric, calc, backgrounds}
+
+\definecolor{Red}{RGB}{ 159, 36, 48 }
+\definecolor{LBlue}{RGB}{ 186, 220, 255 }
+\definecolor{DBlue}{HTML}{132C53} 
+\definecolor{gray}{HTML}{708090}
+
+
+\NewDocumentCommand{\AgentPlus}{O{(0,0)}}{
+    \begin{scope}[shift={#1}]
+    \draw[DBlue, thick, fill=DBlue] (0,0) circle (1.5)
+        node[font=\bfseries, text=white] {+1};
+    \end{scope}
+}
+
+\NewDocumentCommand{\AgentMinus}{O{(0,0)}}{
+    \begin{scope}[shift={#1}]
+    \draw[DBlue, thick, fill=LBlue] (0,0) circle (1.5)
+        node[font=\bfseries, text=DBlue] {-1};
+    \end{scope}
+}
+
+\NewDocumentCommand{\AgentXi}{O{(0,0)}}{
+    \begin{scope}[shift={#1}]
+    \draw[white, thick, fill=Red] (0,0) circle (1.5)
+        node[text=white] {$\symbf{\xi}_t$};
+    \end{scope}
+}
+
+\newcommand{\Canvas}{
+\useasboundingbox (-20.3,-7.2) rectangle (20.3,7.2);
+}
+
+\newcommand{\LeftGrid}{
+    \begin{scope}[shift={(-13,0)}, name prefix=A1-]
+    
+    \coordinate (right) at (8,0);
+    \coordinate (east-agent) at ( 5,0);
+    \coordinate (west-agent) at (-5,0);
+    \coordinate (north-agent) at (0, 5);
+    \coordinate (south-agent) at (0,-5);
+    \coordinate (center) at (0,0);
+
+    \coordinate (northeast-agent) at (5,5);    
+    \coordinate (southeast-agent) at (-5,5);
+    \coordinate (southwest-agent) at (-5,-5);
+    \coordinate (northwest-agent) at (5,-5);
+
+    \end{scope}
+}
+
+\newcommand{\RightGrid}{
+    \begin{scope}[shift={(13,0)}, name prefix=A2-]   
+    
+    \coordinate (left) at (-8,0);
+    \coordinate (east-agent) at ( 5,0);
+    \coordinate (west-agent) at (-5,0);
+    \coordinate (north-agent) at (0, 5);
+    \coordinate (south-agent) at (0,-5);
+    \coordinate (center) at (0,0);
+
+    \coordinate (northeast-agent) at (5,5);    
+    \coordinate (southeast-agent) at (-5,5);
+    \coordinate (southwest-agent) at (-5,-5);
+    \coordinate (northwest-agent) at (5,-5);
+    \end{scope}
+}
+
+\NewDocumentCommand{\DrawSpins}{O{A1}}{
+    \begin{scope}[shift={(#1-center)}]
+    \foreach \i in {-5,0,5}{
+        \draw[gray, thick] (\i,-5) -- (\i,-7);
+        \draw[gray, thick] (\i,5) -- (\i,7);
+        \draw[gray, thick] (\i,-5) -- (\i,0);
+        \draw[gray, thick] (\i,5) -- (\i,0);
+    }
+    \foreach \j in {-5,0,5}{
+        \draw[gray, thick] (-5,\j) -- (-7,\j);
+        \draw[gray, thick] (5,\j) -- (7,\j);
+        \draw[gray, thick] (-5,\j) -- (0,\j);
+        \draw[gray, thick] (5,\j) -- (0,\j);
+    }
+    \end{scope}
+
+    \AgentPlus[(#1-east-agent)]
+    \AgentMinus[(#1-west-agent)]
+    \AgentMinus[(#1-north-agent)]
+    \AgentMinus[(#1-south-agent)]
+    \AgentPlus[(#1-northeast-agent)]
+    \AgentMinus[(#1-southeast-agent)]
+    \AgentPlus[(#1-southwest-agent)]
+    \AgentPlus[(#1-northwest-agent)]
+}
+
+\begin{document}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\begin{scope}[shift={(-13,0)}]
+\draw[white, thick, fill=Red] (0,0) circle (1.5)
+    node[text=white] {$\symbf{\xi}_t$};
+\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\LeftGrid
+\DrawSpins[A1]
+
+\begin{scope}[shift={(-13,0)}]
+\draw[white, thick, fill=Red] (0,0) circle (1.5)
+    node[text=white] {$\symbf{\xi}_t$};
+\end{scope}
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\draw[gray, fill=LBlue, opacity=0.5] (-13,0) circle (7);
+\LeftGrid
+\DrawSpins[A1]
+
+\begin{scope}[shift={(-13,0)}]
+\draw[white, thick, fill=Red] (0,0) circle (1.5)
+    node[text=white] {$\symbf{\xi}_t$};
+\end{scope}
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\LeftGrid
+\RightGrid
+\draw[LBlue,-{Stealth[length={1.5em}, width={1em}]}] (A1-right) parabola bend (0,-7)  (A2-left);
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1em, y=1em]
+\Canvas
+\RightGrid
+\DrawSpins[A2]
+
+\begin{scope}[shift={(13,0)}]
+\draw[white, thick, fill=Red] (0,0) circle (1.5)
+    node[text=white] {$\symbf{\xi}_{t+\mathrm{d}t}$};
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}
