@@ -259,7 +259,54 @@ Dada uma rede $(\mathcal{V},\mathcal{E})$:
 ![](https://assets.tmfss.net/pos-seminar/rule-discordancia_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
 
+## [Regra de atualização em tempo contínuo]{.title-sec}
+Processo de Markov em tempo contínuo:
 
+::: {.incremental}
+- Sem memória: $$P\left[ X_{t_n}, t_n \middle| X_{t_{n-1}}, t_{n-1} \middle| \cdots \middle| X_{t_1}, t_1 \middle| X_{t_0}, t_0  \right] = P\left[ X_{t_n}, t_n \middle|  X_{t_{n-1}}, t_{n-1} \right]\,;$$
+- É um processo de Poisson com tempo distribuído exponencialmente, $$\delta t^{\text{r}}\sim \exp\left(-R_{\text{Total}} \delta t\right)\,,\quad \underbrace{R_{\text{Total}}}_{\text{Taxa de ocorrência de eventos}} \,;$$
+- Em outras palavras, sorteamos um passo $\mathrm{d}t$ e o próximo estado, $X_{t+\mathrm{d}t}$.
+:::
+
+## [Regra de atualização em tempo contínuo]{.title-sec}
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_2.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_3.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+
+::: {.absolute top=40 left=-320 right=320 style="text-align: center;"}
+Sistema no instante $t$;
+:::
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_4.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_5.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+
+::: {.absolute top=450 left=0 right=0 style="text-align: center;"}
+$$f(x;q,\varepsilon) = x^q + \varepsilon\big(1-x^q-(1-x)^q\big)$$
+:::
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_1.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+
+::: {.absolute top=40 left=320 right=-320 style="text-align: center;"}
+Sistema no instante $t+\mathrm{d}t^*$;
+:::
+:::
+
+::: {.fragment}
+
+::: {.absolute top=530 left=320 right=-320 style="text-align: center;"}
+$^*$ *dyn-list Gillespie-like*: $\displaystyle \mathrm{d}t = -\frac{\log\big(1-u^{\text{r}}\big)}{N\max_x\{f(x;q,\varepsilon)\}}$
+:::
+:::
 
 ##
 {{< MakeChapter
