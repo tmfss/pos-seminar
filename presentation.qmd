@@ -339,9 +339,9 @@ $$\frac{\partial}{\partial t}P\left[ \boldsymbol{\xi}_t=(\xi_t(1), \dots, \xi_t(
 ::: {.column width="40%"}
 ### Perspectiva discreta
 ::: {.incremental}
-- Domínios "fractais";
-- Dinâmica de Glauber (Ising Model)
-- Ponto crítico
+- Nitidez: Nós e arestas individuais;
+- Dinâmica: Gillespie exato;
+- Informação extraída: Toda.
 :::
 :::
 :::
@@ -356,9 +356,46 @@ $$\frac{\partial}{\partial t}P\left[ \boldsymbol{\xi}_t=(\xi_t(1), \dots, \xi_t(
 ::: {.column width="40%"}
 ### Perspectiva granular
 ::: {.incremental}
-- Domínios "fractais";
-- Dinâmica de Glauber (Ising Model)
-- Ponto crítico
+- Nitidez: Classes de nós;
+- Dinâmica: SDE;
+- Informação extraída: Efeitos dinâmicos e estocásticos;
+- Informação perdida: Efeitos estruturais.
+:::
+:::
+:::
+
+## [questão de perspectiva]{.title-sec}
+::: {.columns}
+
+::: {.column width="60%"}
+![](https://assets.tmfss.net/pos-seminar/question-of-perspective_3.svg){.fragment width="80%" .absolute top=80 left="-50%" right=0 style="margin: auto;"}
+:::
+
+::: {.column width="40%"}
+### Perspectiva contínua
+::: {.incremental}
+- Nitidez: Classes de redes possíveis;
+- Dinâmica: EDO;
+- Informação extraída: Efeitos dinâmicos;
+- Informação perdida: Efeitos estocásticos.
+:::
+:::
+:::
+
+## [questão de perspectiva]{.title-sec}
+::: {.columns}
+
+::: {.column width="60%"}
+![](https://assets.tmfss.net/pos-seminar/question-of-perspective_4.svg){.fragment width="80%" .absolute top=80 left="-50%" right=0 style="margin: auto;"}
+:::
+
+::: {.column width="40%"}
+### Perspectiva funcional
+::: {.incremental}
+- Nitidez: Assinaturas funcionais do modelo;
+- Dinâmica: EDP;
+- Informação extraída: Classes de equivalência;
+- Informação perdida: Efeitos topológicos.
 :::
 :::
 :::
