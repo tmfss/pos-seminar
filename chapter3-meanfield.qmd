@@ -1,0 +1,81 @@
+
+##
+{{< MakeChapter
+  numbering="03"
+  titulo="Campo médio"
+  desc="Teorias de campo médio homogênea, heterogênea e pair-aprox."
+  img="https://assets.tmfss.net/pos-seminar/cover-meam-field.jpg"
+>}}
+
+## [questão de perspectiva]{.title-sec}
+::: {.columns}
+
+::: {.column width="50%"}
+![](https://assets.tmfss.net/pos-seminar/question-of-perspective_1.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+:::
+
+::: {.column width="50%"}
+### Perspectiva discreta
+::: {.incremental}
+- Nitidez: Nós e arestas individuais;
+- Dinâmica: Gillespie exato;
+- Informação extraída: Toda.
+:::
+:::
+:::
+
+## [questão de perspectiva]{.title-sec}
+::: {.columns}
+
+::: {.column width="50%"}
+![](https://assets.tmfss.net/pos-seminar/question-of-perspective_2.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+:::
+
+::: {.column width="50%"}
+### Perspectiva granular
+::: {.incremental}
+- Nitidez: Classes de nós;
+- Dinâmica: SDE;
+- Informação extraída: Efeitos dinâmicos e estocásticos;
+- Informação perdida: Efeitos estruturais.
+:::
+:::
+:::
+
+## [questão de perspectiva]{.title-sec}
+::: {.columns}
+
+::: {.column width="50%"}
+![](https://assets.tmfss.net/pos-seminar/question-of-perspective_3.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+:::
+
+::: {.column width="50%"}
+### Perspectiva contínua
+::: {.incremental}
+- Nitidez: Classes de redes possíveis;
+- Dinâmica: EDO;
+- Informação extraída: Efeitos dinâmicos;
+- Informação perdida: Efeitos estocásticos.
+:::
+:::
+:::
+
+## [questão de perspectiva]{.title-sec}
+::: {.columns}
+
+::: {.column width="50%"}
+![](https://assets.tmfss.net/pos-seminar/question-of-perspective_4.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+:::
+
+::: {.column width="50%"}
+### Perspectiva funcional
+::: {.incremental}
+- Nitidez: Assinaturas funcionais do modelo;
+- Dinâmica: EDP;
+- Informação extraída: Classes de equivalência;
+- Informação perdida: Efeitos topológicos.
+:::
+:::
+:::
+
+##  

@@ -1,0 +1,18 @@
+##
+{{< MakeChapter
+  numbering="05"
+  titulo="Perspectivas do trabalho"
+  desc="Ordem superior, amostragem estocástica e massa crítica."
+  img="https://parquedoibitipoca.com.br/wp-content/uploads/2023/08/foto-Janela-do-Ceu-scaled-e1691778304126.jpg"
+>}}
+
+## [Interações de ordem superior]{.title-sec}
+::: {.r-stack}
+::: {.fragment .fade-out fragment-index=3}
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_1.svg){.fragment fragment-index=1 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_2.svg){.fragment fragment-index=2 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::
+
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_3.svg){.fragment fragment-index=3 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/hon-polyadic_4.svg){.fragment fragment-index=4 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::

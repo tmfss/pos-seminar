@@ -1,0 +1,102 @@
+##
+{{< MakeChapter
+  numbering="02"
+  titulo="Apresentando o <i>q</i>-Votante" 
+  desc="Um modelo não-linear de dinâmica de opiniões."
+  img="https://assets.tmfss.net/pos-seminar/cover-q-voter.jpg"
+>}}
+
+## [Regra de atualização]{.title-sec}
+::: {.fragment}
+Dada uma rede $(\mathcal{V},\mathcal{E})$:
+:::
+::: {.incremental}
+- A um dado tempo $t$, escolha um nó $i\in\mathcal{V}$;
+- Escolha aleatoriamente $q$ vizinhos do nó $i$ (com possibilidade de repetição);
+    - Se todos os $q$ vizinhos estiverem no mesmo estado, o agente copia seus vizinhos;
+    - Caso os $q$ vizinhos não estejam no mesmo estado, o agente muda com probabilidade $\varepsilon$;
+- O tempo é atualizado $t\leftarrow t+1/N$.
+
+:::
+
+## [Regra de atualização]{.title-sec}
+
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar/rule-consenso_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-consenso_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-consenso_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-consenso_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-consenso_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::
+
+
+## [Regra de atualização]{.title-sec}
+::: {style="display: flex; justify-content: space-around; align-items: center;"}
+![](https://assets.tmfss.net/pos-seminar/rule-discordancia_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-discordancia_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-discordancia_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-discordancia_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/rule-discordancia_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::
+
+## [Regra de atualização em tempo contínuo]{.title-sec}
+Processo de Markov em tempo contínuo:
+
+::: {.incremental}
+- Sem memória: $$P\left[ X_{t_n}, t_n \middle| X_{t_{n-1}}, t_{n-1} \middle| \cdots \middle| X_{t_1}, t_1 \middle| X_{t_0}, t_0  \right] = P\left[ X_{t_n}, t_n \middle|  X_{t_{n-1}}, t_{n-1} \right]\,;$$
+- É um processo de Poisson com tempo distribuído exponencialmente, $$\delta t^{\text{r}}\sim \exp\left(-R_{\text{Total}} \delta t\right)\,,\quad \underbrace{R_{\text{Total}}}_{\text{Taxa de ocorrência de eventos}} \,;$$
+- Em outras palavras, sorteamos um passo no tempo, $\delta t^{\text{r}}$, e o próximo estado, $X^{\text{r}}_{t+\mathrm{d}t}$.
+:::
+
+## [Regra de atualização em tempo contínuo]{.title-sec}
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_2.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_3.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+
+::: {.absolute top=40 left=-320 right=320 style="text-align: center;"}
+Sistema no instante $t$;
+:::
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_4.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_5.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+
+::: {.absolute top=450 left=0 right=0 style="text-align: center;"}
+$$f(x;q,\varepsilon) = x^q + \varepsilon\big(1-x^q-(1-x)^q\big)$$
+:::
+:::
+
+::: {.fragment}
+![](https://assets.tmfss.net/pos-seminar/rule-rate_1.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+
+::: {.absolute top=40 left=320 right=-320 style="text-align: center;"}
+Sistema no instante $t+\mathrm{d}t^*$;
+:::
+:::
+
+::: {.fragment}
+
+::: {.absolute top=530 left=320 right=-320 style="text-align: center;"}
+$^*$ *dyn-list Gillespie-like*: $\displaystyle \mathrm{d}t = \delta t^{\text{r}} = -\frac{\log\big(1-u^{\text{r}}\big)}{N\max_x\{f(x;q,\varepsilon)\}}$
+:::
+:::
+
+## [Tempo contínuo]{.title-sec}
+
+Sobre a taxa $f(x;q,\varepsilon)$:
+
+:::{.incremental}
+- Ela revela a natureza *não-linear* do modelo: $$f(x;q,\varepsilon) = {\color{red}{x^q}} + \varepsilon\big(1-{\color{red}{x^q}}-{\color{red}{(1-x)^q}}\big)\,;$$
+- Podemos construir a equação mestra,
+$$\frac{\partial}{\partial t}P\left[ \boldsymbol{\xi}_t=(\xi_t(1), \dots, \xi_t(N))\right] = \sum_{i=1}^N \left[ \underbrace{W^{+}_i(\boldsymbol{\xi}^i) P(\boldsymbol{\xi}^i, t)}_{\text{+1}} - \underbrace{W^{-}_i(\boldsymbol{\xi}) P(\boldsymbol{\xi}, t)}_{\text{-1}} \right]\,; $$
+
+- Bem como o algoritmo de *Gillespie* (tempo contínuo) otimizado;
+- Olhar para a classe GV, com parâmetros $a\big(q,\varepsilon\big)$ e $b\big(q,\varepsilon\big)$.
+:::
