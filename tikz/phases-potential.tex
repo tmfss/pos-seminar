@@ -16,6 +16,7 @@
 \definecolor{gray}{HTML}{708090}
 \definecolor{orange}{HTML}{ed9552}
 \definecolor{orange2}{HTML}{e29d40}
+\definecolor{PrintColor}{HTML}{000000}
 
 \pgfmathdeclarefunction{V}{3}{%
         \pgfmathparse{ -( (#2/2)*(abs(#1)^2) + ((#3-#2)/4)*(abs(#1)^4) - (#3/6)*(abs(#1)^6))}%
@@ -75,26 +76,26 @@
 }
 
 \newcommand{\EndMacros}{
-    \node[white, anchor=north, yshift=-0.5em, font=\bfseries] at (botC) {Magnetização $\symbf{\phi}$};
-    \node[white, anchor=north, yshift=-0.5em, font=\bfseries] at (\magM,-\Ly) {$\symbf{-1}$};
-    \node[white, anchor=north, yshift=-0.5em, font=\bfseries] at (\magP,-\Ly) {$\symbf{+1}$};
-    \node[white, anchor=south, yshift=0.5em, font=\bfseries] at (0,-\Ly) {$\symbf{0}$};
+    \node[PrintColor, anchor=north, yshift=-0.5em, font=\bfseries] at (botC) {Magnetização $\symbf{\phi}$};
+    \node[PrintColor, anchor=north, yshift=-0.5em, font=\bfseries] at (\magM,-\Ly) {$\symbf{-1}$};
+    \node[PrintColor, anchor=north, yshift=-0.5em, font=\bfseries] at (\magP,-\Ly) {$\symbf{+1}$};
+    \node[PrintColor, anchor=south, yshift=0.5em, font=\bfseries] at (0,-\Ly) {$\symbf{0}$};
 
     \draw[gray, very thick] (\magM,-\Ly) -- (\magM,-\Ly+0.5);
     \draw[gray, very thick] (0,-\Ly) -- (0,-\Ly+0.5);
     \draw[gray, very thick] (\magP,-\Ly) -- (\magP,-\Ly+0.5);
-    \node[white, very thick, anchor=south east] at (\magM,0) {$\symbf{V=0}$};
-    \draw[white, thick] (botL) rectangle (topR);
+    \node[PrintColor, very thick, anchor=south east] at (\magM,0) {$\symbf{V=0}$};
+    \draw[PrintColor, thick] (botL) rectangle (topR);
 }
 
 \newcommand{\Legend}{
     \begin{scope}[shift={(\magP,0)}]
         \draw[noise arrow, yshift=1em] (-1.5,3) to[bend left=10] (1.5,3);
-        \node[white, anchor=north, yshift=1em] at (0,3) {Ruído};
+        \node[PrintColor, anchor=north, yshift=1em] at (0,3) {Ruído};
         \draw[drift arrow, yshift=1em] (-2,0) -- (2,0)
-            node[white, midway, below, anchor=north] {Drift};
+            node[PrintColor, midway, below, anchor=north] {Drift};
         \draw[jump arrow, yshift=1em] (-2,-3) -- (2,-3)
-            node[white, midway, below, anchor=north] {Efetivo};
+            node[PrintColor, midway, below, anchor=north] {Efetivo};
     \end{scope}
 }
 
@@ -118,7 +119,7 @@
 
 \begin{tikzpicture}[x=1em, y=1em]
     \BeginMacros
-    \node[white, anchor=north, yshift=-0.5em, font=\bfseries] at (topC) {Fase Ferromagnética};
+    \node[PrintColor, anchor=north, yshift=-0.5em, font=\bfseries] at (topC) {Fase Ferromagnética};
 
     \draw[Blue, very thick, line width=0.3em] plot
         [domain=-1.2:1.2, samples=120]
@@ -142,7 +143,7 @@
 
 \begin{tikzpicture}[x=1em, y=1em]
     \BeginMacros
-    \node[white, anchor=north, yshift=-0.5em, font=\bfseries] at (topC) {Fase mista};
+    \node[PrintColor, anchor=north, yshift=-0.5em, font=\bfseries] at (topC) {Fase mista};
 
     \draw[Red, very thick, line width=0.3em] plot
         [domain=-1.2:1.2, samples=120]
@@ -178,8 +179,8 @@
         {120*V(-1,-0.5,2.5)}
     }
 
-    \node[white,font=\bfseries] (ferro) at (0,-0.5*\Ly) {Mínimos Ferromagnéticos};
-    \node[white,font=\bfseries] (para) at (0,0.5*\Ly) {Mínimo Paramagnético};
+    \node[PrintColor,font=\bfseries] (ferro) at (0,-0.5*\Ly) {Mínimos Ferromagnéticos};
+    \node[PrintColor,font=\bfseries] (para) at (0,0.5*\Ly) {Mínimo Paramagnético};
 
     \draw[indicate arrow] (\magP,\Min) -- (ferro);
     \draw[indicate arrow] (\magM,\Min) -- (ferro);
@@ -191,7 +192,7 @@
 
 \begin{tikzpicture}[x=1em, y=1em]
     \BeginMacros
-    \node[white, anchor=north, yshift=-0.5em, font=\bfseries] at (topC) {Fase Paramagnética};
+    \node[PrintColor, anchor=north, yshift=-0.5em, font=\bfseries] at (topC) {Fase Paramagnética};
 
     \draw[LBlue, very thick, line width=0.3em] plot
         [domain=-1.2:1.2, samples=120]

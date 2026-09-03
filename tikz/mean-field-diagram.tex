@@ -14,6 +14,7 @@
 \definecolor{gray}{HTML}{708090}
 \definecolor{orange}{HTML}{ed9552}
 \definecolor{orange2}{HTML}{e29d40}
+\definecolor{PrintColor}{HTML}{000000}
 
 % =====================================================================
 % BLOCO LUA: Cálculo das equações e do Convex Hull (Monotone Chain)
@@ -140,21 +141,21 @@ end
             {Fase mista};
 
         % --- EIXOS ---
-        \node[font=\bfseries, white, anchor=center, align=center] at ($(botC)+(0,-1)$)
+        \node[font=\bfseries, PrintColor, anchor=center, align=center] at ($(botC)+(0,-1)$)
             {$\boldsymbol{a}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(botRm) + (0,-1)$) -- ($(botRm) + (4,-1)$)
             node[anchor=east, align=center, xshift=-4em] {$\boldsymbol{a>0}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(botLm) + (0,-1)$) -- ($(botLm) + (-4,-1)$)
             node[anchor=west, align=center, xshift=4em] {$\boldsymbol{a<0}$};
 
-        \node[font=\bfseries, white, anchor=center, align=center, rotate=90] at ($(leftC)+(-1,0)$)
+        \node[font=\bfseries, PrintColor, anchor=center, align=center, rotate=90] at ($(leftC)+(-1,0)$)
             {$\boldsymbol{b}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(leftTm) + (-1,0)$) -- ($(leftTm) + (-1,4)$)
             node[anchor=east, align=center, rotate=90,xshift=-4em] {$\boldsymbol{b>0}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(leftBm) + (-1,0)$) -- ($(leftBm) + (-1,-4)$)
             node[anchor=west, align=center, rotate=90,xshift=4em] {$\boldsymbol{b<0}$};
 
@@ -220,21 +221,21 @@ end
             {Fase mista};
 
         % --- EIXOS ---
-        \node[font=\bfseries, white, anchor=center, align=center] at ($(botC)+(0,-1)$)
+        \node[font=\bfseries, PrintColor, anchor=center, align=center] at ($(botC)+(0,-1)$)
             {$\boldsymbol{a}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(botRm) + (0,-1)$) -- ($(botRm) + (4,-1)$)
             node[anchor=east, align=center, xshift=-4em] {$\boldsymbol{a>0}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(botLm) + (0,-1)$) -- ($(botLm) + (-4,-1)$)
             node[anchor=west, align=center, xshift=4em] {$\boldsymbol{a<0}$};
 
-        \node[font=\bfseries, white, anchor=center, align=center, rotate=90] at ($(leftC)+(-1,0)$)
+        \node[font=\bfseries, PrintColor, anchor=center, align=center, rotate=90] at ($(leftC)+(-1,0)$)
             {$\boldsymbol{b}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(leftTm) + (-1,0)$) -- ($(leftTm) + (-1,4)$)
             node[anchor=east, align=center, rotate=90,xshift=-4em] {$\boldsymbol{b>0}$};
-        \draw[white, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
+        \draw[PrintColor, thick, -{Stealth[length={0.7em}, width={0.5em}]}]
             ($(leftBm) + (-1,0)$) -- ($(leftBm) + (-1,-4)$)
             node[anchor=west, align=center, rotate=90,xshift=4em] {$\boldsymbol{b<0}$};
 
