@@ -79,7 +79,7 @@
 :::
 
 ## [Grafo completo]{.title-sec}
-$$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\phi;q,\varepsilon)\,;$$
+$$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
 
 ::: {.incremental}
 - $q=1$, $v(x)=0$ (Voter-model);
@@ -93,7 +93,7 @@ $$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\ph
 :::
 
 ## [Grafo completo]{.title-sec}
-$$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\phi;q,\varepsilon)\,;$$
+$$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
 
 ::: {.incremental}
 - $q=4$, Três fases:
@@ -103,7 +103,7 @@ $$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\ph
 :::
 
 ## [Grafo completo]{.title-sec}
-$$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\phi;q,\varepsilon)\,;$$
+$$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
 
 ::: {.incremental}
 - Colocar o gráfico das fases
