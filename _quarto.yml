@@ -15,8 +15,9 @@ csl: https://www.zotero.org/styles/nature-brackets
 format:
     revealjs:
         mainfont: "TeX Gyre Pagella"
-        no-clean: true
-        theme: dark
+        no-clean: true 
+        theme:  default # Gostei: default , serif , simple
+
         logo: "https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg"
         css: "room/slides-theme.css"
         incrmental: true

@@ -10,7 +10,7 @@
     margin-bottom: 20px;
   }
   .boxing {
-    background-color: rgba(20, 28, 43, 0.6);
+    background-color: rgba(20, 28, 43, 0.2);
     border-radius: 15px;
     padding: 20px 20px;
     border: 1px solid rgba(255,255,255,0.05);
@@ -114,7 +114,7 @@ background: linear-gradient(90deg, #1E90FF, #FF1493);
   padding-top: 10px;
 }
 
-.reveal-viewport { /* Cria o gradiente radial inspirado na imagem (azul escuro para quase preto) */ background: radial-gradient(circle at top right, #172235, #07090e 80%) !important; background-color: #07090e !important; }
+/* .reveal-viewport { background: radial-gradient(circle at top right, #172235, #07090e 80%) !important; background-color: #07090e !important; }
 
 /* A malha principal que organiza os cartões em 2 colunas */
 .indice-grid {
@@ -134,7 +134,7 @@ background: linear-gradient(90deg, #1E90FF, #FF1493);
 
 /* O design do fundo de cada cartão */
 .indice-card {
-  background-color: rgba(25, 33, 48, 0.9);
+  background-color: rgba(3, 28, 75, 0.1);
   border-radius: 12px;
   padding: 15px 20px; /* Preenchimento mais contido */
   display: flex;
@@ -171,7 +171,7 @@ background: linear-gradient(90deg, #1E90FF, #FF1493);
 
 /* O título em negrito */
 .reveal .indice-card .textos strong {
-  color: #ffffff;
+  color: #000000;
   font-size: 0.7em;
   line-height: 1.1 !important;
   display: block;
@@ -183,18 +183,9 @@ background: linear-gradient(90deg, #1E90FF, #FF1493);
   display: none !important;
 }
 
-/* O título em negrito */
-.reveal .indice-card .textos strong {
-  color: #ffffff;
-  font-size: 0.7em;
-  line-height: 1 !important;
-  display: block;
-  margin-bottom: 0 !important; /* Zerado */
-}
-
 /* A descrição */
 .reveal .indice-card .textos .desc {
-  color: #8c9baf;
+  color: #303741;
   font-size: 0.5em;
   line-height: 1.2 !important;
   display: block;

@@ -27,7 +27,7 @@ return {
 <div class="boxing">
 <div class="linha-gradiente"> </div>
 <div class="subtitulo"> %s </div> 
-<h1 class="titulo-principal"> %s </h1> 
+<h1 class="titulo-principal" style="color: #FFFFFF;"> %s </h1> 
 <p style="color: #FFFFFF; font-size: 1.2em;"> %s </p> 
 <div style="display: flex; justify-content: flex-end;">
 <div class="caixa-logos">

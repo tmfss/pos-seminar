@@ -21,7 +21,7 @@
 Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
 :::
 ::: {.incremental}
-- Estados de spin no tempo 𝑡, $\xi_t:\mathcal{V}\to\{−1,1\}\,;$
+- Estados de spin no tempo $t$, $\xi_t:\mathcal{V}\to\{−1,1\}\,;$
 - Magnetização local, $\phi(\mathbf{x}_i,t)=\frac{1}{M}\sum_{j\in M_{\delta}(i)}\xi_t(j)\,;$
 - *Consenso:* $$\lim_{t\to\infty}\mathrm{P}\big[\xi_t(i)\not=\xi_t(j)\big]\to0\,,\quad\forall i\not=j\in\mathcal{V}\,;$$
 - *Fragmentação:* $$\lim_{t\to\infty}\mathrm{P}\big[\xi_t(i)\not=\xi_t(j)\big]>0\,,\quad\forall i\not=j\in\mathcal{V}\,;$$
