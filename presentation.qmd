@@ -34,13 +34,7 @@ shortcodes:
 
 {{< include chapter3-meanfield.qmd >}}
 
-##
-{{< MakeChapter
-  numbering="04"
-  titulo="Redes"
-  desc="Dinâmica em lattices, RRN e redes livres de escala."
-  img="https://assets.tmfss.net/pos-seminar/scale-free-net.svg"
->}}
+{{< include chapter4-networks.qmd >}}
 
 {{< include chapter5-perspectives.qmd >}}
 
