@@ -22,21 +22,21 @@ Dada uma rede $(\mathcal{V},\mathcal{E})$:
 ## [Regra de atualização]{.title-sec}
 
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/rule-consenso_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-consenso_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-consenso_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-consenso_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-consenso_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-consenso_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-consenso_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-consenso_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-consenso_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-consenso_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
 
 
 ## [Regra de atualização]{.title-sec}
 ::: {style="display: flex; justify-content: space-around; align-items: center;"}
-![](https://assets.tmfss.net/pos-seminar/rule-discordancia_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-discordancia_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-discordancia_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-discordancia_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/rule-discordancia_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-discordancia_2.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-discordancia_3.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-discordancia_4.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-discordancia_5.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-discordancia_6.svg){.fragment width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::
 
 ## [Regra de atualização em tempo contínuo]{.title-sec}
@@ -50,11 +50,11 @@ Processo de Markov em tempo contínuo:
 
 ## [Regra de atualização em tempo contínuo]{.title-sec}
 ::: {.fragment}
-![](https://assets.tmfss.net/pos-seminar/rule-rate_2.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-rate_2.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
 
 ::: {.fragment}
-![](https://assets.tmfss.net/pos-seminar/rule-rate_3.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-rate_3.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 
 ::: {.absolute top=40 left=-320 right=320 style="text-align: center;"}
 Sistema no instante $t$;
@@ -62,11 +62,11 @@ Sistema no instante $t$;
 :::
 
 ::: {.fragment}
-![](https://assets.tmfss.net/pos-seminar/rule-rate_4.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-rate_4.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 :::
 
 ::: {.fragment}
-![](https://assets.tmfss.net/pos-seminar/rule-rate_5.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-rate_5.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 
 ::: {.absolute top=450 left=0 right=0 style="text-align: center;"}
 $$f(x;q,\varepsilon) = x^q + \varepsilon\big(1-x^q-(1-x)^q\big)$$
@@ -74,7 +74,7 @@ $$f(x;q,\varepsilon) = x^q + \varepsilon\big(1-x^q-(1-x)^q\big)$$
 :::
 
 ::: {.fragment}
-![](https://assets.tmfss.net/pos-seminar/rule-rate_1.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-rule-rate_1.svg){width="100%" .absolute top=120 left=0 right=0 style="margin: auto;"}
 
 ::: {.absolute top=40 left=320 right=-320 style="text-align: center;"}
 Sistema no instante $t+\mathrm{d}t^*$;

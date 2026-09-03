@@ -11,7 +11,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/question-of-perspective_1.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_1.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
@@ -28,7 +28,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/question-of-perspective_2.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_2.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
@@ -46,7 +46,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/question-of-perspective_3.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_3.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
@@ -64,7 +64,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/question-of-perspective_4.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_4.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
