@@ -11,7 +11,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_1.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_1.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
@@ -28,7 +28,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_2.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_2.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
@@ -46,7 +46,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_3.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_3.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
@@ -64,7 +64,7 @@
 ::: {.columns}
 
 ::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_4.svg){.fragment width="60%" .absolute top=120 left="-65%" right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_4.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
 :::
 
 ::: {.column width="50%"}
@@ -78,4 +78,33 @@
 :::
 :::
 
-##  
+## [Grafo completo]{.title-sec}
+"Force" (Langevin/FP): $$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\phi;q,\varepsilon)\,;$$
+
+::: {.incremental}
+- $q=1$, $v(x)=0$ (Voter-model);
+- $q=2$, Duas fases:
+    - Ferromagnética $\phi v(\phi)<0$ para $\varepsilon<1/2$,
+    - Paramagnética $\phi v(\phi)>0$ para $\varepsilon>1/2$;
+- $q=3$, Duas fases:
+    - Ferromagnética $\phi v(\phi)<0$ para $\varepsilon<1/3$,
+    - Paramagnética $\phi v(\phi)>0$ para $\varepsilon>1/3$;
+- $q\geq 4$ começam os casos interessantes$\dots$
+:::
+
+## [Grafo completo]{.title-sec}
+"Force" (Langevin/FP): $$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\phi;q,\varepsilon)\,;$$
+
+::: {.incremental}
+- $q=4$, Três fases:
+    - $\varepsilon<3/14$: fase ferromagnética;
+    - $3/14<\varepsilon<1/4$: fase mista;
+    - $1/4<\varepsilon$: fase paramagnética.
+:::
+
+## [Grafo completo]{.title-sec}
+"Force" (Langevin/FP): $$ v(\phi)=\left(1-\phi\right)f(1-\phi;q,\varepsilon)-\left(1+\phi\right)f(1+\phi;q,\varepsilon)\,;$$
+
+::: {.incremental}
+- Colocar o gráfico das fases
+:::

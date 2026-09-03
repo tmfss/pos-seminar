@@ -1,16 +1,16 @@
 project:
-    title: "Sistemas Caóticos"
+    title: ""
     type: website
     output-dir: _slides
     render:
         - presentation.qmd
 
 author: "Timóteo Fassoni"
-description: "Introdução aos Sistemas Caóticos"
+description: ""
 lang: pt-BR
 
 bibliography: room/references.bib
-csl: https://www.zotero.org/styles/nature-brackets
+#csl: https://www.zotero.org/styles/nature-brackets
 
 format:
     revealjs:
@@ -18,7 +18,6 @@ format:
         no-clean: true 
         theme:  default # Gostei: default , serif , simple
 
-        logo: "https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg"
         css: "room/slides-theme.css"
         incrmental: true
         vcenter: true
@@ -29,7 +28,6 @@ format:
         preview-links: auto            
         html-math-method: mathjax
         include-in-header:
-         - text: '<link rel="icon" href="https://assets.tmfss.net/logos/IbitiPhysIcoGrey.svg" type="image/svg+xml">'
          - text: |
               <script>
               window.MathJax = {
