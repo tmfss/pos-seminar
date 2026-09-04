@@ -3,83 +3,12 @@
 {{< MakeChapter
   numbering="03"
   titulo="Campo médio"
-  desc="Teorias de campo médio homogênea, heterogênea e pair-aprox."
-  img="https://assets.tmfss.net/pos-seminar/cover-meam-field.jpg"
+  desc="Teoria de campo médio homogênea."
+  img="https://lims.ac.uk/media/vzwvvslv8mex2vbb.png"
 >}}
 
-## [questão de perspectiva]{.title-sec}
-::: {.columns}
-
-::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_1.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
-:::
-
-::: {.column width="50%"}
-### Perspectiva discreta
-::: {.incremental}
-- Nitidez: Nós e arestas individuais;
-- Dinâmica: Gillespie exato;
-- Informação extraída: Toda.
-:::
-:::
-:::
-
-## [questão de perspectiva]{.title-sec}
-::: {.columns}
-
-::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_2.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
-:::
-
-::: {.column width="50%"}
-### Perspectiva granular
-::: {.incremental}
-- Nitidez: Classes de nós;
-- Dinâmica: SDE;
-- Informação extraída: Efeitos dinâmicos e estocásticos;
-- Informação perdida: Efeitos estruturais.
-:::
-:::
-:::
-
-## [questão de perspectiva]{.title-sec}
-::: {.columns}
-
-::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_3.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
-:::
-
-::: {.column width="50%"}
-### Perspectiva contínua
-::: {.incremental}
-- Nitidez: Classes de redes possíveis;
-- Dinâmica: EDO;
-- Informação extraída: Efeitos dinâmicos;
-- Informação perdida: Efeitos estocásticos.
-:::
-:::
-:::
-
-## [questão de perspectiva]{.title-sec}
-::: {.columns}
-
-::: {.column width="50%"}
-![](https://assets.tmfss.net/pos-seminar/dark-question-of-perspective_4.svg){.fragment width="50%" .absolute top=120 left="-50%" right=0 style="margin: auto;"}
-:::
-
-::: {.column width="50%"}
-### Perspectiva funcional
-::: {.incremental}
-- Nitidez: Assinaturas funcionais do modelo;
-- Dinâmica: EDP;
-- Informação extraída: Classes de equivalência;
-- Informação perdida: Efeitos topológicos.
-:::
-:::
-:::
-
-## [Grafo completo]{.title-sec}
-$$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
+## [Grafo completo^[@castellano_nonlinear_2009, @mean_field_q_voter]]{.title-sec}
+$$\text{"Force"} = v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
 
 ::: {.incremental}
 - $q=1$, $v(x)=0$ (Voter-model);
@@ -92,8 +21,8 @@ $$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\ph
 - $q\geq 4$ começam os casos interessantes$\dots$
 :::
 
-## [Grafo completo]{.title-sec}
-$$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
+## [Grafo completo^[@castellano_nonlinear_2009, @mean_field_q_voter]]{.title-sec}
+$$\text{"Force"} = v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
 
 ::: {.incremental}
 - $q=4$, Três fases:
@@ -102,9 +31,10 @@ $$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\ph
     - $1/4<\varepsilon$: fase paramagnética.
 :::
 
-## [Grafo completo]{.title-sec}
-$$ v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
+## [Grafo completo^[@castellano_nonlinear_2009, @mean_field_q_voter]]{.title-sec}
+$$\text{"Force"} = v(\phi)=\left(1-\phi\right)f(1+\phi;q,\varepsilon)-\left(1+\phi\right)f(1-\phi;q,\varepsilon)\,;$$
 
-::: {.incremental}
-- Colocar o gráfico das fases
+:::{.r-stack}
+![](https://assets.tmfss.net/pos-seminar/mean-field-mixed-phases.svg){.fragment .fade-in-then-out width="90%" .absolute top=90 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/dark-mean-field-diagram_2.svg){.fragment .fade-in width="90%" .absolute top=90 left=0 right=0 style="margin: auto;"}
 :::

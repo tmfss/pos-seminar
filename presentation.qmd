@@ -10,7 +10,7 @@ shortcodes:
   title="Modelo q-Votante <br> e ordem superior"
   author="Timóteo Fassoni, Silvio Ferreira e Wesley Cota"
   where="Seminário da Pós"
-  logo="https://assets.tmfss.net/logos/IbitiLogoBlue.svg, https://assets.tmfss.net/logos/gisc/dark.svg, https://assets.tmfss.net/logos/ufv/white.png"
+  logo="https://assets.tmfss.net/pos-seminar/IbitiLogo-3.svg, https://assets.tmfss.net/logos/gisc/dark.svg, https://assets.tmfss.net/logos/ufv/white.png"
   back_img="https://parquedoibitipoca.com.br/wp-content/uploads/2023/08/foto-Janela-do-Ceu-scaled-e1691778304126.jpg"
 >}}
 <div class="div-bottom-centro">
@@ -23,8 +23,8 @@ shortcodes:
 {{< MakeIndex 
   "Revisitando o Votante" "Modelo do Votante, transições de fase e a classe GV."
   "Apresentando o <i>q</i>-Votante" "Um modelo não-linear de dinâmica de opiniões."
-  "Campo médio" "Teorias de campo médio homogênea, heterogênea e pair-aprox."
-  "Redes" "Dinâmica em lattices, RRN e redes livres de escala."
+  "Campo médio" "Teoria de campo médio homogênea."
+  "Redes" "Dinâmica em reticulados, RRN e redes heterogêneas."
   "Perspectivas do trabalho" "Ordem superior, amostragem estocástica e massa crítica."
 >}}
 

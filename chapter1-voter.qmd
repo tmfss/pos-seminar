@@ -18,7 +18,7 @@
 ## [O modelo do Votante]{.title-sec}
 
 :::{.fragment}
-Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
+Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos^[@cox_nonlinear_1991]:
 :::
 ::: {.incremental}
 - Estados de spin no tempo $t$, $\xi_t:\mathcal{V}\to\{−1,1\}\,;$
@@ -35,11 +35,11 @@ Consideramos uma rede $(\mathcal{V},\mathcal{E})$ e definimos:
 :::
 
 ::: {.column width="50%"}
-### Propriedades chave
+### Propriedades chave^[@dornic_critical_2001]
 ::: {.incremental}
 - Domínios "fractais";
-- Dinâmica de Glauber (Ising Model)
-- Ponto crítico
+- Dinâmica de Glauber (Ising Model);
+- Sistema crítico.
 :::
 :::
 :::
@@ -163,7 +163,8 @@ $$
 :::
 :::
 
-## [Classe GV]{.title-sec}
+## [Classe GV^[@vazquez_systems_2008, @al_hammal_langevin_2005]]{.title-sec}
+
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=3}
 ::: {.fragment fragment-index=1}

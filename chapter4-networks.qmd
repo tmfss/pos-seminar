@@ -2,23 +2,21 @@
 {{< MakeChapter
   numbering="04"
   titulo="Redes"
-  desc="Dinâmica em lattices, RRN e redes livres de escala."
+  desc="Dinâmica em reticulados, RRN e redes livres de escala."
   img="https://assets.tmfss.net/pos-seminar/scale-free-net.svg"
 >}}
 
-## [Lattices]{.title-sec}
-Começamos com as lattices...
+## [Reticulados]{.title-sec}
+Começamos com os reticulados...
 
 :::{.incremental}
-- O modelo foi originalmente simulado em lattices;
-- A ideia é ter um ponto de partida: um $\big(q(t_0),p(t_0)\big)$ como benchmark;
-- Três propriedades centrais:
+- O modelo foi originalmente simulado em reticulados^[@castellano_nonlinear_2009];
+- Propriedades centrais:
     - $1/\rho(t)\sim\log(t)$ no ponto crítico (característico da classe GV);
-    - $\tau_\infty\sim \exp(N)$ na região paramagnética;
     - Comportamento do ponto crítico do votante para $\varepsilon=1/4$.
 :::
 
-## [Lattices]{.title-sec}
+## [Reticulados]{.title-sec}
 :::{.r-stack}
 ![](https://assets.tmfss.net/pos-seminar/Fig-consenso.png){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 ![](https://assets.tmfss.net/pos-seminar/Fig-densidade_links_ativos.png){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
@@ -26,27 +24,40 @@ Começamos com as lattices...
 
 ## [RRNs]{.title-sec}
 
+Para as RRNs...
+
+:::{.incremental}
+- Fase mista, a princípio, não observada na literatura^[@mean_field_q_voter];
+- Propriedades centrais que encontramos:
+    - Efeito de histerese (presença da fase mista);
+    - Comportamento do ponto crítico do votante para $\varepsilon=1/4$.
+:::
+
+## [RRNs]{.title-sec}
+
+![](https://assets.tmfss.net/pos-seminar/grafs/graf-rrn-hysteresis.svg){width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+
+
 ## [Redes complexas]{.title-sec}
 
 :::{.incremental}
-- Este modelo nunca tinha sido testado em redes heterogêneas antes!;
 - Usamos o Voter como forma de comparação;
 - Algumas propriedades:
     - Recuperamos a fase mista e a histerese;
-    - Mudança no ponto crítico da classe GV.
+    - Ponto crítico da classe GV.
 :::
 
 
 ## [Redes complexas]{.title-sec}
 
 :::{.r-stack}
+![](https://assets.tmfss.net/pos-seminar/graf-complex-nets-classical-voter-compairson.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/grafs/graf-complex-nets-s-curve.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/grafs/graf-complex-nets-scaling-time.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+
 ![](https://assets.tmfss.net/pos-seminar/graf-phase-diagram-quantities-gamma23.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 ![](https://assets.tmfss.net/pos-seminar/graf-phase-diagram-var-gamma23.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 
 ![](https://assets.tmfss.net/pos-seminar/graf-scalee-free-eps-bondary.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/graf-scalee-free-hysteris-gamma.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-
-![](https://assets.tmfss.net/pos-seminar/graf-complex-nets-classical-voter-compairson.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/graf-complex-nets-s-curve.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
-![](https://assets.tmfss.net/pos-seminar/graf-complex-nets-scaling-time.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/grafs/graf-scalee-free-hysteris.svg){.fragment .fade-in width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 :::

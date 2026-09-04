@@ -6,7 +6,7 @@
   img="https://assets.tmfss.net/pos-seminar/cover-q-voter.jpg"
 >}}
 
-## [Regra de atualização]{.title-sec}
+## [Regra de atualização^[@castellano_nonlinear_2009]]{.title-sec}
 ::: {.fragment}
 Dada uma rede $(\mathcal{V},\mathcal{E})$:
 :::

@@ -10,14 +10,14 @@ description: ""
 lang: pt-BR
 
 bibliography: room/references.bib
-#csl: https://www.zotero.org/styles/nature-brackets
+csl: https://www.zotero.org/styles/nature-brackets
 
 format:
     revealjs:
         mainfont: "TeX Gyre Pagella"
         no-clean: true 
         theme:  default # Gostei: default , serif , simple
-
+        logo: https://assets.tmfss.net/pos-seminar/IbitiLogo-3.svg
         css: "room/slides-theme.css"
         incrmental: true
         vcenter: true
@@ -25,7 +25,7 @@ format:
         slide-number: true
         chalkboard:
             buttons: true
-        preview-links: auto            
+        preview-links: auto
         html-math-method: mathjax
         include-in-header:
          - text: |

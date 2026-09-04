@@ -6,11 +6,6 @@
   img="https://parquedoibitipoca.com.br/wp-content/uploads/2023/08/foto-Janela-do-Ceu-scaled-e1691778304126.jpg"
 >}}
 
-## [Enumerando perspectivas]{.title-sec}
-::: {.incremental}
-
-:::
-
 ## [Interações de ordem superior]{.title-sec}
 ::: {.r-stack}
 ::: {.fragment .fade-out fragment-index=3}
@@ -29,12 +24,47 @@
 - Não é trivial generalizar sem "perder" o modelo no processo.
 :::
 
-## [Ordem superior: Node based $\times$ Hyperedge based]{.title-sec}
-![](https://assets.tmfss.net/pos-seminar/graf-rrn-compare-exit-time.svg){.fragment fragment-index=3 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+## [Ordem superior: Node based model]{.title-sec}
+::: {.fragment}
+Dada uma rede $(\mathcal{V},\mathcal{H})$:
+:::
+::: {.incremental}
+- A um dado tempo $t$, escolha um nó $i\in\mathcal{V}$;
+- Escolha aleatoriamente uma hiperaesta $h_j\in\mathcal{H}$ que contenha i;
+- Escolha aleatoriamente $q$ vizinhos do nó $i$ contidos em $h_j$:
+    - Se todos os $q$ vizinhos estiverem no mesmo estado, o agente copia seus vizinhos;
+    - Caso os $q$ vizinhos não estejam no mesmo estado, o agente muda com probabilidade $\varepsilon$;
+- O tempo é atualizado $t\leftarrow t+1/N$.
+:::
+
+## [Ordem superior: Hyperedge based model]{.title-sec}
+::: {.fragment}
+Dada uma rede $(\mathcal{V},\mathcal{H})$:
+:::
+::: {.incremental}
+- A um dado tempo $t$, escolha uma hiperaresta $h_j\in\mathcal{H}$;
+- Escolha aleatoriamente $q$ nós contidos em $h_j$ :
+    - Se todos os $q$ nós estiverem no mesmo estado, um agente focal $i\in\mathcal{H}$ copia o estado;
+    - Caso os $q$ nós não estejam no mesmo estado, um agente focal $i\in\mathcal{H}$ copia o estado muda com probabilidade $\varepsilon$;
+- O tempo é atualizado $t\leftarrow t+1/M$.
+:::
 
 ## [Ordem superior: Node based $\times$ Hyperedge based]{.title-sec}
-![](https://assets.tmfss.net/pos-seminar/graf-rrn-compare-exit-prob.svg){.fragment fragment-index=3 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
 
-## [Ordem superior: Node based $\times$ Hyperedge based]{.title-sec}
-![](https://assets.tmfss.net/pos-seminar/graf-rrn-hb-time-scaling-order-q.svg){.fragment fragment-index=3 width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::{.r-stack}
+![](https://assets.tmfss.net/pos-seminar/graf-rrn-compare-exit-time.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/graf-rrn-compare-exit-prob.svg){.fragment .fade-in-then-out width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+![](https://assets.tmfss.net/pos-seminar/graf-rrn-hb-time-scaling-order-q.svg){.fragment .fade-in width="100%" .absolute top=60 left=0 right=0 style="margin: auto;"}
+:::
 
+
+## [Enumerando perspectivas]{.title-sec}
+
+::: {.incremental}
+- Amostragem estocástica: escolher $n^{\text{r}}\sim P(n;q)$ vizinhos;
+- Efeitos de localização;
+- Variações do modelo:
+    - Múltiplos estados (opiniões);
+    - Zelotes (não os judeus, mas pessoas com "ideia fixa");
+- **HON**.
+:::
