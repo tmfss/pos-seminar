@@ -65,6 +65,6 @@ Dada uma rede $(\mathcal{V},\mathcal{H})$:
 - Efeitos de localização;
 - Variações do modelo:
     - Múltiplos estados (opiniões);
-    - Zelotes (não os judeus, mas pessoas com "ideia fixa");
+    - Zelotes (pessoas com "ideia fixa"^[@zealots]);
 - **HON**.
 :::
