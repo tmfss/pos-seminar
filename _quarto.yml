@@ -23,8 +23,6 @@ format:
         vcenter: true
         transition: slide
         slide-number: true
-        chalkboard:
-            buttons: true
         preview-links: auto
         html-math-method: mathjax
         include-in-header:
